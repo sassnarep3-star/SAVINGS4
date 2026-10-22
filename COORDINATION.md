@@ -24,7 +24,7 @@
 | T5b | Security/FDIC/Apps — docs | **done** | 4b134088-savings4 | `docs/security.html` | FDIC $250k per depositor per bank per category (Understanding Deposit Insurance, BankFind) + each bank's app + security page | FDIC math single/joint/trust/2-bank, 12 app links, Discover+CapOne one-limit trap |
 | T6a | Line-by-line verification, Flagged (root) | **done** | 674b0fdc | `flagged.html` (F1–F12) | See F1–F12 in flagged.html | Irregularities published non-blocking |
 | T6b | Sources Ledger + Flagged (docs) | **done** | 4b134088-savings4 | `docs/sources.html`, `docs/flagged.html` (8 flagged), `docs/methodology.html` | 16 primary official dated + 6 secondary observed | Re-verify combined data, link official source per row |
-| T7 | Final Integration, PR to main, merge, Pages deploy | **done / in progress** | 674b0fdc + 4b134088-savings4 | Combined site, `COORDINATION.md`, `README.md` | All sources above | 674b0fdc's PR #1 merged 94b7ad9; 4b134088's PR #2 in conflict-resolution (this merge). Publish resolves conflict without discarding either session's work. |
+| T7 | Final Integration, PR to main, merge, Pages deploy | **done** | 674b0fdc + 4b134088-savings4 | Combined site, `COORDINATION.md`, `README.md` | All sources above | PR #1 94b7ad9 + PR #2 e174205 merged; Pages built ✅; see Publish Record below |
 
 ### Status Legend
 - `done` — completed, sources recorded
@@ -58,8 +58,8 @@
 - [x] Site builds locally: `python3 -m http.server` on `docs/` and on root — 200, JSON valid, no broken internal links (one JS-template false positive only)
 - [x] Pages workflow (674b0fdc) present: `.github/workflows/pages.yml` uploads `path:.` (root + docs folder)
 - [x] Conflict-resolution commit pushed; PR #2 re-merge → main
-- [ ] GH Pages deploy confirmed — checked via Actions tab after merge
-- [ ] PR link + merge result recorded below after merge
+_- [x] GH Pages deploy confirmed — ✅ built (API status: built, workflow success 39697906108/39697904651) — checked via Actions tab after merge
+- [x] PR link + merge result recorded — PR #2 https://github.com/sassnarep3-star/SAVINGS4/pull/2 merged e174205
 
 ## Irregularities & Flagged Items (joint)
 - Root flagged F1–F12 (Capital One NaN, Citi/BofA blank, Chase ZIP-gated, Discover→Capital One FDIC aggregation, Wells conditional, SoFi Plus fee unstated, Barclays fee blank, AARP excluded, etc.)
@@ -68,3 +68,16 @@
 
 ---
 *Last update: 2026-10-22 by 4b134088-savings4 during integration — merged both sessions, resolved conflicts without discarding work, ready for final Pages deploy*
+
+## Publish Record (final integration)
+
+- **PR #1 (674b0fdc):** https://github.com/sassnarep3-star/SAVINGS4/pull/1 — merged 2026-10-22 commit 94b7ad9 (root site + workflow)
+- **PR #2 (4b134088-savings4):** https://github.com/sassnarep3-star/SAVINGS4/pull/2 — merged 2026-10-22T00:08:53Z commit e174205 (docs site + merged coordination)
+  - Merge commit on main: `e174205 Merge pull request #2 from sassnarep3-star/arena/4b134088-savings4`
+  - Conflict resolution commit on arena branch: `36f90be Merge main (PR #1 root site 674b0fdc) into arena/4b134088-savings4`
+  - Resolution: kept both sites (root + docs), merged README/COORDINATION without discarding work — logged above
+- **GitHub Pages deploy:** ✅ success — workflow `Deploy GitHub Pages` + `pages-build-deployment` both `completed success` (run IDs 39697906108 / 39697904651, ~19s/33s). API `https://api.github.com/repos/sassnarep3-star/SAVINGS4/pages` reports `status: built`, `html_url: https://sassnarep3-star.github.io/SAVINGS4/`, `source: {branch: main, path: /}`
+- **Live URLs:** https://sassnarep3-star.github.io/SAVINGS4/ (root dashboard) and https://sassnarep3-star.github.io/SAVINGS4/docs/ (docs dashboard — also accessible via artifact upload)
+- **Final checklist:** all items above now [x] — site live, PRs merged, irregularities on Flagged for Review (non-blocking per spec)
+
+*Recorded 2026-10-22 by session 4b134088-savings4 post-deploy verification*
