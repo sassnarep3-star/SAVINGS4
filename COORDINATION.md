@@ -13,7 +13,7 @@
 | `674b0fdc` | `arena/674b0fdc-savings4` | [PR #1](https://github.com/sassnarep3-star/SAVINGS4/pull/1) (`94b7ad9`) | Preserved intact at `previous/root/**` and `previous/coordination/**` | `done` (merged) |
 | `4b134088` | `arena/4b134088-savings4` | [PR #2](https://github.com/sassnarep3-star/SAVINGS4/pull/2) (`e174205`) | Preserved at `docs/**` (reconciled for official-only links & verified rates in `docs/data/savings.json`) | `done` (merged) |
 | `f025ed43` | `arena/f025ed43-savings4` | [PR #3](https://github.com/sassnarep3-star/SAVINGS4/pull/3) (`a74e2cc`) | `research/**`, `data/**`, `scripts/**`, `assets/**`, `pages/**`, `index.html`, `.github/workflows/pages.yml` | `done` (merged) |
-| `339c96e1` | `arena/339c96e1-savings4` | Final Integration PR -> `main` | Non-overlapping `audit/**`, `categories/**`, `static/**` + line-by-line audit & unified 17-account/15-charter expansion across `data/**`, `scripts/**`, `index.html`, `pages/**`, `docs/data/savings.json`, `README.md`, `COORDINATION.md` | `in progress` |
+| `339c96e1` | `arena/339c96e1-savings4` | [PR #5](https://github.com/sassnarep3-star/SAVINGS4/pull/5) (`2d722ec`) | Non-overlapping `audit/**`, `categories/**` + line-by-line audit & unified 18-account/16-charter expansion across `data/**`, `scripts/**`, `index.html`, `pages/**`, `docs/**`, `README.md`, `COORDINATION.md` | `done` (merged & deployed) |
 
 ---
 
@@ -23,10 +23,16 @@
 |---|---|---|---|---|
 | `T1` | Repository audit & multi-session coordination setup | `done` | `339c96e1` (reconciled with `674b0fdc`, `4b134088`, `f025ed43`) | `COORDINATION.md` |
 | `T2` | Sibling branch work preserved in full (`previous/root/**`, `docs/**`, `research/**`, `data/**`, `scripts/**`, `pages/**`) | `done` | `674b0fdc`, `4b134088`, `f025ed43` | `previous/**`, `docs/**`, `research/**`, `data/**`, `assets/**`, `pages/**`, `scripts/**` |
-| `T3` | Line-by-line official source verification & primary regulatory/bank rate audit across 17 national accounts / 16 FDIC charters + cross-audit of PR #1, PR #2, and PR #3 | `done` | `339c96e1` | `audit/verified-banks.json`, `audit/regulatory-benchmarks.json`, `audit/verification-log.md` |
-| `T4` | Return-on-investment matrices across deposit tiers ($1k, $10k, $25k, $50k, $100k, $250k single-owner FDIC max, $500k joint/multi-bank max) and multi-horizon lifespans (3m, 6m, 1y, 3y, 5y) from opening date `2026-10-22` | `done` | `339c96e1` | `audit/return-matrices.json`, `audit/compute_returns.py` |
-| `T5` | Unified 17-account expansion of `data/**` + `scripts/**` + root/category pages + reconciliation of prior-session discrepancies (`AUDIT-ERR-01`..`06`) | `in progress` | `339c96e1` | `data/**`, `scripts/**`, `assets/**`, `index.html`, `pages/**`, `categories/**`, `docs/data/savings.json`, `audit/verify_site.py` |
-| `T6` | Full test suite (`unittest` + `audit/verify_site.py`), reproducible Pages build, PR to `main`, immediate merge, and live GitHub Pages deployment confirmation | `in progress` | `339c96e1` | `README.md`, `.nojekyll`, `COORDINATION.md`, `.github/workflows/pages.yml` |
+| `T3` | Line-by-line official source verification & primary regulatory/bank rate audit across 18 national accounts / 16 FDIC charters + cross-audit of PR #1, PR #2, PR #3, and PR #4 | `done` | `339c96e1` | `audit/verified-banks.json`, `audit/regulatory-benchmarks.json`, `audit/verification-log.md` |
+| `T4` | Return-on-investment matrices across deposit tiers ($1k, $10k, $25k, $50k, $100k, $240k, $250k single-owner FDIC max, $500k joint/multi-bank max) and multi-horizon lifespans (3m, 6m, 1y, 3y, 5y) from opening date `2026-10-22` | `done` | `339c96e1` | `audit/return-matrices.json`, `audit/compute_returns.py` |
+| `T5` | Unified 18-account expansion of `data/**` + `scripts/**` + 8-category dashboard + remediation of prior-session discrepancies (`AUDIT-ERR-01`..`07`) | `done` | `339c96e1` | `data/**`, `scripts/**`, `assets/**`, `index.html`, `pages/**`, `categories/**`, `docs/**`, `audit/verify_site.py` |
+| `T6` | Full test suite (`15` unit tests + `audit/verify_site.py`), reproducible Pages build, PR #5 to `main`, immediate merge, and live GitHub Pages deployment confirmation | `done` | `339c96e1` | `README.md`, `.nojekyll`, `COORDINATION.md`, `.github/workflows/pages.yml` |
+
+### Final PR, Merge & Live GitHub Pages Verification (`339c96e1`)
+
+- **Pull Request:** <https://github.com/sassnarep3-star/SAVINGS4/pull/5> — **MERGED** (`2026-10-22T00:34:08Z`), merge commit `2d722ec88a3d625df188726b28ad66990bc1f08a`.
+- **CI Verification Runs:** PR #5 check <https://github.com/sassnarep3-star/SAVINGS4/actions/runs/39700430101> (`success`) & `main` push check <https://github.com/sassnarep3-star/SAVINGS4/actions/runs/39700473603> (`success`) — all 15 unit tests, 36-page local link/fragment check, zero-aggregator scan, and byte-for-byte Pages reproducibility checks passed.
+- **Live GitHub Pages Deployment:** Build `1304011293` reported `status: "built"`, `error: null` for commit `2d722ec88a3d625df188726b28ad66990bc1f08a` (`2026-10-22T00:34:29Z`). Fetched and verified live in production at <https://sassnarep3-star.github.io/SAVINGS4/> and <https://sassnarep3-star.github.io/SAVINGS4/pages/flagged.html>.
 
 ### Cross-Session Coordination & Audit Notes (`339c96e1`)
 
