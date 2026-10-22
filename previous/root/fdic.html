@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Max FDIC Insurance Strategy</title><link rel="stylesheet" href="assets/style.css"></head>
+<body><header><h1>Maximising FDIC insurance for your savings</h1><p>Goal stated in the brief: the maximum FDIC insurance for savings. Key fact most people miss: the $250,000 limit covers <strong>principal + accrued interest</strong>, so depositing exactly $250,000 leaves the interest uninsured in a single-ownership account at one bank.</p></header>
+<nav><a href="index.html">Dashboard</a><a href="accounts.html">All Accounts</a><a href="returns.html">Returns by Deposit Size</a><a href="fdic.html">Max FDIC Strategy</a><a href="bonuses.html">Bonuses &amp; Promotions</a><a href="methodology.html">Methodology &amp; Sources</a><a href="flagged.html">⚠ Flagged for Review</a></nav>
+<main>
+<div class="card"><h2>The official rule</h2>
+<table><tr><th>Fact</th><th>Official wording / value</th><th>Source</th></tr>
+<tr><td>Standard limit</td><td>“$250,000 per depositor, per FDIC-insured bank, for each account ownership category”</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/faq">fdic.gov — Deposit Insurance FAQs</a></td></tr>
+<tr><td>Interest counts toward the limit</td><td>FDIC covers the account balance “dollar-for-dollar, up to the insurance limit, <strong>including principal and any accrued interest</strong> through the date of the insured bank's failure”</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance">fdic.gov — At A Glance</a></td></tr>
+<tr><td>Aggregation</td><td>All single accounts owned by the same person at the same bank are added together and insured up to $250,000; deposits at different insured banks are insured separately</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance">fdic.gov — Understanding Deposit Insurance</a></td></tr>
+<tr><td>More coverage at one bank</td><td>Different ownership categories (single, joint — $250,000 per co-owner, trust/POD per beneficiary, retirement) are separately insured when requirements are met</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/faq">fdic.gov FAQs</a></td></tr>
+<tr><td>Check your own coverage</td><td>FDIC Electronic Deposit Insurance Estimator (EDIE)</td><td><a href="https://edie.fdic.gov/">edie.fdic.gov</a></td></tr>
+<tr><td>Confirm a bank is insured</td><td>FDIC BankFind Suite</td><td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind">banks.data.fdic.gov</a></td></tr>
+</table></div>
+
+<div class="card"><h2>Largest single deposit that stays fully insured (single account, one bank)</h2>
+<p>Max deposit = $250,000 ÷ (1+APY)<sup>years</sup> — i.e. deposit + all interest to that date = $250,000. Assumes constant APY and no withdrawals/additions.</p>
+<table><tr><th>Bank / Account (APY)</th><th>Max fully-insured deposit — 1 yr</th><th>— 3 yr</th><th>— 5 yr</th><th>Interest if you deposit $250,000 anyway (1 yr) — amount above the limit*</th><th>Source</th></tr>
+<tr><td>Barclays Tiered (3.65% tier)</td><td>$241,196.33</td><td>$224,508.14</td><td>$208,974.59</td><td>$9,125 earned → balance $259,125; $9,125 above limit</td><td><a href="https://banking.us.barclays/compare-our-products.html">Barclaysus.com</a></td></tr>
+<tr><td>Synchrony (3.55%)</td><td>$241,429.26</td><td>$225,159.20</td><td>$209,985.59</td><td>$8,875 → $258,875; $8,875 above</td><td><a href="https://www.synchrony.com/banking/products/high-yield-savings">synchrony.com</a></td></tr>
+<tr><td>Marcus (3.50%)</td><td>$241,545.89</td><td>$225,485.68</td><td>$210,493.29</td><td>$8,750 → $258,750; $8,750 above</td><td><a href="https://www.marcus.com/us/en/savings/high-yield-savings">marcus.com</a></td></tr>
+<tr><td>SoFi qualifying (3.30%) — standard $250k limit</td><td>$242,013.55</td><td>$226,797.91</td><td>$212,538.89</td><td>$8,250 → $258,250; $8,250 above (unless enrolled in SIDP, below)</td><td><a href="https://www.sofi.com/legal/banking-rate-sheet">sofi.com</a></td></tr>
+<tr><td>Amex / Capital One (3.20%)</td><td>$242,248.06</td><td>$227,457.84</td><td>$213,570.63</td><td>$8,000 → $258,000; $8,000 above</td><td>Accounts page sources</td></tr>
+<tr><td>Ally (3.10%)</td><td>$242,483.03</td><td>$228,120.34</td><td>$214,608.38</td><td>$7,750 → $257,750; $7,750 above</td><td><a href="https://www.ally.com/bank/view-rates/">ally.com</a></td></tr>
+</table>
+<p class="small">*Simplification: in practice interest is credited monthly and coverage is measured on the failure date; treat these as planning ceilings, and keep a buffer below them because APYs are variable.</p></div>
+
+<div class="card"><h2>Ways to insure more than $250,000 (all from official sources)</h2>
+<table><tr><th>Strategy</th><th>How it works</th><th>Official source</th></tr>
+<tr><td><strong>SoFi Insured Deposit Program (SIDP)</strong> — up to <strong>$3M</strong> at one login</td><td>“Deposits may be insured up to $3M through participation in the program” — SoFi places program deposits at multiple participating FDIC-insured banks; SoFi Bank itself provides no more than $250,000 per depositor per ownership category. Watch out: balances you already hold at a participating bank count toward that bank's limit.</td><td><a href="https://www.sofi.com/banking/fdic/">sofi.com/banking/fdic</a> · <a href="https://www.sofi.com/banking/fdic/participatingbanks">participating banks list</a></td></tr>
+<tr><td>Split across different FDIC-insured banks</td><td>Each separately chartered insured bank gets its own $250,000 per-depositor/per-category limit (e.g. ~$241–242k each at Synchrony, Marcus, Amex… using the 1-yr ceilings above).</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance">fdic.gov</a></td></tr>
+<tr><td>Joint account</td><td>$250,000 <em>per co-owner</em> — a 2-owner joint account can insure $500,000 at one bank.</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance">fdic.gov — At A Glance</a></td></tr>
+<tr><td>Trust / POD beneficiaries</td><td>Revocable-trust coverage is per owner per beneficiary (e.g. 1 owner × 3 beneficiaries = up to $750,000 per the FDIC FAQ example), if titling requirements are met.</td><td><a href="https://www.fdic.gov/resources/deposit-insurance/faq">fdic.gov FAQs</a></td></tr>
+<tr><td>⚠ Capital One + Discover now aggregate</td><td>Capital One states deposit accounts at Capital One or Discover Bank opened on/after May 18, 2025 “are immediately counted with your other Capital One deposit accounts for determining deposit insurance coverage” — do <em>not</em> count them as two separate $250k limits for new accounts.</td><td><a href="https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/">capitalone.com (FAQ)</a> — see Flagged</td></tr>
+</table>
+<p class="callout"><strong>Practical max-FDIC plan (from the verified rates):</strong> if you want every dollar insured at one institution with one login, SoFi's SIDP (up to $3M) is the only verified program in this study that does that — at 3.30% APY only if you keep eligible direct deposit / $5,000 qualifying deposits flowing every 31 days (else 0.80%). If you prefer no conditions, spread ~$241k (1-yr ceiling) each across Synchrony (3.55%), Marcus (3.50%) and Barclays/Amex/Capital One, re-checking ceilings as rates change.</p></div>
+</main><footer>FDIC rules verified at fdic.gov on 2026-10-22 · This is insurance-limit arithmetic, not financial advice · Confirm your exact coverage with FDIC EDIE.</footer>
+</body></html>

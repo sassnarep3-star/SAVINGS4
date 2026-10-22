@@ -1,0 +1,187 @@
+[
+  {
+    "id": "capital-rate",
+    "title": "Capital One current APY unresolved",
+    "detail": "Product page returned \u201cNaN APY\u201d effective October 21. Disclosure dated July 15 states 3.20%; that older figure is not promoted to a confirmed October 22 quote. Current APY and projections left blank.",
+    "sources": [
+      "capital",
+      "capital-disclosure"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "synchrony-rate",
+    "title": "Synchrony rates conflict",
+    "detail": "Same page shows Special Member Rates 3.55% and calculator 2.85%. Member eligibility not resolved. Current APY and projections left blank rather than choosing a number.",
+    "sources": [
+      "synchrony"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "capital-discover",
+    "title": "Discover is not extra insurance capacity",
+    "detail": "Discover savings URL redirects to Capital One. For accounts opened now, Capital One says Discover and Capital One deposits aggregate. Discover not counted as a separate new-account option.",
+    "sources": [
+      "discover",
+      "capital"
+    ],
+    "severity": "Coverage"
+  },
+  {
+    "id": "barclays-tier",
+    "title": "Barclays 3.65% tier conflicts with interest headroom",
+    "detail": "Top tier starts at $250,000. With no other deposits, that consumes the entire single-owner limit before interest or bonus. Models use the confirmed 3.50% below-limit tier and keep modeled end balances below $250,000.",
+    "sources": [
+      "barclays",
+      "fdic-faq"
+    ],
+    "severity": "Coverage"
+  },
+  {
+    "id": "chase-rate",
+    "title": "Chase requires location before displaying APY",
+    "detail": "Official rate page returned a ZIP form, not a numerical rate. No precise home ZIP is known; competitor comparison rates are not accepted. APY blank.",
+    "sources": [
+      "chase-rate"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "bofa-values",
+    "title": "Bank of America placeholder values",
+    "detail": "Official product page returned $XXXX for fee and waiver balance; opening deposit not confirmed. Rate page linked a Virginia PDF by default. Current NY APY, fee and opening minimum blank.",
+    "sources": [
+      "bofa",
+      "bofa-rate"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "wells-location",
+    "title": "Wells Fargo rate is for California, not New York",
+    "detail": "Way2Save page shows CA 94105 and 0.01% APY. That is not a verified NY offer. NY APY and projections blank. Correct spelling is /way2save/, not /ways2save/.",
+    "sources": [
+      "wells-way2save"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "wells-platinum-rate",
+    "title": "Platinum Savings current NY APY not confirmed",
+    "detail": "Official overview confirms product, $25 opening minimum and $12 fee with $3,500 balance waiver, but provides no numeric NY rate. APY blank.",
+    "sources": [
+      "wells"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "citi-rate",
+    "title": "Citi template token and location eligibility unresolved",
+    "detail": "Page returned :BLUE_AccSavings_Rate% rather than a number. NY Accelerate availability, opening minimum, fee amount and security controls not confirmed; unavailable values blank.",
+    "sources": [
+      "citi"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "pnc-availability",
+    "title": "PNC title and body disagree",
+    "detail": "Page title advertises 3.15%; body says product is not available in your area. Location context is not established, so neither rate nor New York availability is accepted. HYS terms blank; excluded from models.",
+    "sources": [
+      "pnc"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "amex-security",
+    "title": "Amex security controls not fully verified",
+    "detail": "Official product page verifies mobile app and FDIC, but inspected content does not establish specific authentication controls. Security cell blank; not labeled fully security-vetted.",
+    "sources": [
+      "amex"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "wells-security",
+    "title": "Wells Fargo security controls not fully verified",
+    "detail": "Inspected privacy policy documents mobile applications, but is not evidence of specific savings-account authentication controls. Security cells blank.",
+    "sources": [
+      "wells",
+      "wells-privacy"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "eligibility",
+    "title": "Opening eligibility is not a personal approval",
+    "detail": "Opening-rule summaries contain only confirmed facts, not a complete replacement for account agreements. Age, residency, tax status and prior-customer history are not known. Incomplete rules are explicitly identified; no account has been applied for or opened.",
+    "sources": [
+      "marcus-faq",
+      "barclays",
+      "ally",
+      "amex",
+      "chase",
+      "bofa",
+      "citi"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "promotions",
+    "title": "Unconfirmed promotions stay blank",
+    "detail": "Only Barclays cash offer and Marcus referral boost are confirmed in inspected official content. Other bonus cells are blank and unverified, not $0 or \u201cnone.\u201d Targeted offers may exist.",
+    "sources": [
+      "marcus-bonus",
+      "barclays",
+      "ally",
+      "amex",
+      "capital",
+      "chase",
+      "bofa",
+      "synchrony",
+      "wells",
+      "citi",
+      "pnc"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "variable",
+    "title": "Future rates and fully insured principal are conditional",
+    "detail": "All modeled savings APYs are variable. Fixed-rate scenarios are calculations, not promised returns or a future coverage guarantee. No fixed maximum deposit can guarantee headroom if rates or other same-bank balances increase.",
+    "sources": [
+      "marcus",
+      "barclays",
+      "amex",
+      "ally",
+      "fdic-faq"
+    ],
+    "severity": "Model"
+  },
+  {
+    "id": "benchmark-difference",
+    "title": "Bank marketing averages differ from direct FDIC benchmark",
+    "detail": "Ally/Barclays cite September 0.37%; Amex shows September 0.37%; Marcus comparison shows 0.40%. Direct FDIC October 19 table is 0.38%. Use the direct, dated FDIC figure, not marketing \u201ctimes average\u201d claims.",
+    "sources": [
+      "benchmark",
+      "marcus",
+      "barclays",
+      "ally",
+      "amex"
+    ],
+    "severity": "Review"
+  },
+  {
+    "id": "prior-sessions",
+    "title": "Concurrent-session snapshots need reconciliation",
+    "detail": "Two other sessions merged research into main during this session. Their root HTML/assets are preserved under previous/root and their docs site remains unchanged. They contain additional products and differing rate/location interpretations. They are historical prior-session snapshots, not independently reverified current quotes, and are not silently imported into this dashboard. See Sources & methodology for both preserved sites and the original coordination history.",
+    "sources": [
+      "synchrony",
+      "capital",
+      "citi",
+      "pnc"
+    ],
+    "severity": "Review"
+  }
+]

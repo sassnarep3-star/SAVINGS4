@@ -1,0 +1,332 @@
+[
+  {
+    "id": "marcus",
+    "bank": "Marcus by Goldman Sachs",
+    "product": "Online Savings",
+    "category": "National digital",
+    "apy": 3.5,
+    "rateAsOf": "2026-10-21",
+    "minimum": 0,
+    "monthlyFee": 0,
+    "waiver": "No monthly fee.",
+    "opening": "Valid physical residential address; identity verification; electronic or paper signature card for each owner. Complete age/tax-status eligibility not confirmed in inspected FAQ.",
+    "access": "No debit/ATM card. ACH, wire or requested check; $100k same-day transfer service subject to timing and conditions.",
+    "app": "Marcus app",
+    "security": "MFA, encryption, firewalls, 24/7 network monitoring.",
+    "fdic": "Goldman Sachs Bank USA; combines with other deposits at same bank.",
+    "sources": [
+      "marcus",
+      "marcus-faq",
+      "marcus-security",
+      "marcus-fdic"
+    ],
+    "flags": [
+      "eligibility",
+      "variable"
+    ],
+    "modelEligible": true,
+    "bonus": "Extra 1.00 percentage point APY for 3 months via qualifying referral; no cash bonus asserted.",
+    "bonusSources": [
+      "marcus-bonus"
+    ]
+  },
+  {
+    "id": "barclays",
+    "bank": "Barclays",
+    "product": "Tiered Savings",
+    "category": "National digital",
+    "apy": 3.5,
+    "rateAsOf": "2026-10-07",
+    "minimum": 0,
+    "monthlyFee": 0,
+    "waiver": "No monthly maintenance fee.",
+    "opening": "External US bank account in an owner\u2019s name; test-deposit verification. Full age/residency/tax-ID eligibility not confirmed.",
+    "access": "No wire transfers. $1m deposit maximum/account; 3 Tiered Savings accounts maximum.",
+    "app": "Barclays US App; not retired US Savings App",
+    "security": "Password protection, encryption and firewalls.",
+    "fdic": "Barclays Bank Delaware; same-bank accounts aggregate.",
+    "sources": [
+      "barclays",
+      "barclays-app"
+    ],
+    "flags": [
+      "barclays-tier",
+      "eligibility",
+      "variable"
+    ],
+    "modelEligible": true,
+    "bonus": "$200 conditional cash bonus; $25,000 external deposit, 120-day hold; open by 2026-10-31.",
+    "bonusSources": [
+      "barclays"
+    ]
+  },
+  {
+    "id": "amex",
+    "bank": "American Express",
+    "product": "High Yield Savings",
+    "category": "National digital",
+    "apy": 3.2,
+    "rateAsOf": "2026-10-21",
+    "minimum": 0,
+    "monthlyFee": 0,
+    "waiver": "No monthly fee.",
+    "opening": "Identity verification, approval email, online registration and funding. Full age/residency/tax-ID rules not confirmed.",
+    "access": "No ATM/debit card or checks. Transfer funding or mobile/mailed check.",
+    "app": "American Express App",
+    "security": null,
+    "fdic": "American Express National Bank; member FDIC.",
+    "sources": [
+      "amex"
+    ],
+    "flags": [
+      "amex-security",
+      "eligibility",
+      "variable"
+    ],
+    "modelEligible": true,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "ally",
+    "bank": "Ally Bank",
+    "product": "Savings Account",
+    "category": "National digital",
+    "apy": 3.1,
+    "rateAsOf": "2026-10-21",
+    "minimum": 0,
+    "monthlyFee": 0,
+    "waiver": "No monthly maintenance fee.",
+    "opening": "Personal information including address and SSN; fund account. Full age/residency rules not confirmed.",
+    "access": "10 limited withdrawals/transfers per statement cycle; repeated excess can cause closure.",
+    "app": "Ally app",
+    "security": "MFA; online/mobile guarantee requires reporting within 60 days of statement availability.",
+    "fdic": "Ally Bank; product page confirms FDIC coverage.",
+    "sources": [
+      "ally",
+      "ally-security"
+    ],
+    "flags": [
+      "eligibility",
+      "variable"
+    ],
+    "modelEligible": true,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "synchrony",
+    "bank": "Synchrony Bank",
+    "product": "High Yield Savings",
+    "category": "National digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": 0,
+    "monthlyFee": 0,
+    "waiver": "No monthly fee.",
+    "opening": "Personal information such as SSN or Tax ID, complete application and fund. Full eligibility not confirmed.",
+    "access": "Optional ATM card; outgoing wire $25; other service fees may apply.",
+    "app": "Synchrony Bank app",
+    "security": "24/7 transaction monitoring; detailed authentication not verified.",
+    "fdic": "Synchrony Bank; member FDIC.",
+    "sources": [
+      "synchrony"
+    ],
+    "flags": [
+      "synchrony-rate",
+      "eligibility"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "capital",
+    "bank": "Capital One",
+    "product": "360 Performance Savings",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": 0,
+    "monthlyFee": 0,
+    "waiver": "No monthly fees.",
+    "opening": "18+, US citizen/lawful permanent resident, qualifying US address, US mobile, SSN/ITIN, US linked account. Fund at least $0.01 to be considered opened; approved applications have 60 days to fund.",
+    "access": "No direct ATM withdrawals from savings; transfer to checking first.",
+    "app": "Capital One Mobile",
+    "security": "Biometric login and suspicious-fraud alerts.",
+    "fdic": "Combines Capital One and Discover deposits opened now.",
+    "sources": [
+      "capital",
+      "capital-disclosure",
+      "capital-security"
+    ],
+    "flags": [
+      "capital-rate",
+      "capital-discover"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "chase",
+    "bank": "Chase",
+    "product": "Chase Savings",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": 0,
+    "monthlyFee": 5,
+    "waiver": "$0 with $300+ at start of every day; other qualifying automatic transfer, linked checking or under-25 waivers.",
+    "opening": "Apply online or at branch; address, email, SSN and contact details. Full eligibility not confirmed.",
+    "access": "Online/mobile check deposits and transfers.",
+    "app": "Chase Mobile",
+    "security": "Encryption, biometrics, website passkeys, extra validation for unusual login.",
+    "fdic": "Chase savings page confirms FDIC coverage.",
+    "sources": [
+      "chase",
+      "chase-rate",
+      "chase-security"
+    ],
+    "flags": [
+      "chase-rate",
+      "eligibility"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "bofa",
+    "bank": "Bank of America",
+    "product": "Advantage Savings",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": null,
+    "monthlyFee": null,
+    "waiver": "Six-month new-account fee waiver; under-25 and qualifying relationship waivers. Balance waiver threshold not verified.",
+    "opening": "Online application, personal information, identity verification and funding options. Full rules and opening minimum not confirmed.",
+    "access": "Mobile check deposit, transfers and custom activity alerts.",
+    "app": "Bank of America Mobile Banking",
+    "security": "Custom activity alerts; full authentication controls not verified.",
+    "fdic": "Product page confirms FDIC coverage.",
+    "sources": [
+      "bofa",
+      "bofa-rate"
+    ],
+    "flags": [
+      "bofa-values",
+      "eligibility"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "wells",
+    "bank": "Wells Fargo",
+    "product": "Way2Save Savings",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": 25,
+    "monthlyFee": 5,
+    "waiver": "$0 with $300 minimum daily balance or qualifying transfers, Save As You Go, or primary owner 24 or under.",
+    "opening": "Online: 18+, SSN/ITIN, physical US address and own mobile. Identity verification; $25 opening deposit.",
+    "access": "Debit/ATM access.",
+    "app": "Mobile applications documented at bank level",
+    "security": null,
+    "fdic": "Wells Fargo savings page confirms FDIC coverage.",
+    "sources": [
+      "wells",
+      "wells-way2save",
+      "wells-privacy"
+    ],
+    "flags": [
+      "wells-location",
+      "wells-security"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "wells-platinum",
+    "bank": "Wells Fargo",
+    "product": "Platinum Savings",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": 25,
+    "monthlyFee": 12,
+    "waiver": "$0 with $3,500 minimum daily balance each fee period.",
+    "opening": "Online: 18+, SSN/ITIN, physical US address and own mobile. Identity verification; $25 opening deposit.",
+    "access": "Option to write checks.",
+    "app": "Mobile applications documented at bank level",
+    "security": null,
+    "fdic": "Wells Fargo savings page confirms FDIC coverage.",
+    "sources": [
+      "wells",
+      "wells-privacy"
+    ],
+    "flags": [
+      "wells-platinum-rate",
+      "wells-security"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "citi",
+    "bank": "Citi",
+    "product": "Savings / Accelerate (availability unresolved)",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": null,
+    "monthlyFee": null,
+    "waiver": "$500+ average monthly balance or Citi Checking can waive savings fees; full pricing unresolved.",
+    "opening": "Pricing depends on home address; NY product availability and complete opening rules not confirmed.",
+    "access": null,
+    "app": "Citi Mobile",
+    "security": null,
+    "fdic": "Citi savings page states FDIC-insured savings.",
+    "sources": [
+      "citi"
+    ],
+    "flags": [
+      "citi-rate",
+      "eligibility"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  },
+  {
+    "id": "pnc",
+    "bank": "PNC",
+    "product": "High Yield Savings (availability unresolved)",
+    "category": "National branch + digital",
+    "apy": null,
+    "rateAsOf": null,
+    "minimum": null,
+    "monthlyFee": null,
+    "waiver": null,
+    "opening": null,
+    "access": null,
+    "app": "PNC Mobile Banking",
+    "security": null,
+    "fdic": null,
+    "sources": [
+      "pnc"
+    ],
+    "flags": [
+      "pnc-availability"
+    ],
+    "modelEligible": false,
+    "bonus": null,
+    "bonusSources": []
+  }
+]
