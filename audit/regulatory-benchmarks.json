@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "auditSessionId": "339c96e1",
+    "accountOpeningDateAssumed": "2026-10-22",
+    "verificationTimestampUtc": "2026-10-22T00:10:00Z",
+    "borrowerUserLocationContext": "New York City, NY, US",
+    "strictVerificationPolicy": "Official .gov and primary FDIC-insured bank domains only. Any metric that cannot be confirmed directly from an official primary source without session-cookie spoofing or inference is left null/blank and flagged on the Flagged for Review page."
+  },
+  "fdicInsuranceRules": {
+    "standardLimitSingleOwner": 250000,
+    "jointAccountTwoOwnersLimit": 500000,
+    "revocableOrIrrevocableTrustPerBeneficiary": 250000,
+    "trustMaxFiveOrMoreBeneficiaries": 1250000,
+    "trustRuleEffectiveDate": "2024-04-01",
+    "accruedInterestIncludedInCap": true,
+    "officialBrochureUrl": "https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance",
+    "officialEstimatorUrl": "https://edie.fdic.gov/",
+    "officialBankFindUrl": "https://banks.data.fdic.gov/bankfind-suite/bankfind"
+  },
+  "fdicNationalRates": {
+    "publicationTitle": "National Rates and Rate Caps – October 2026",
+    "effectiveDate": "2026-10-19",
+    "officialUrl": "https://www.fdic.gov/national-rates-and-rate-caps",
+    "products": [
+      { "product": "Savings", "nationalRatePct": 0.38, "rateCapAdjustedPct": 1.13, "treasuryYieldPct": 3.88, "nationalRateCapPct": 4.63 },
+      { "product": "Interest Checking", "nationalRatePct": 0.07, "rateCapAdjustedPct": 0.82, "treasuryYieldPct": 3.88, "nationalRateCapPct": 4.63 },
+      { "product": "Money Market", "nationalRatePct": 0.63, "rateCapAdjustedPct": 1.38, "treasuryYieldPct": 3.88, "nationalRateCapPct": 4.63 },
+      { "product": "1 month CD", "nationalRatePct": 0.23, "rateCapAdjustedPct": 0.98, "treasuryYieldPct": 4.02, "nationalRateCapPct": 5.57 },
+      { "product": "3 month CD", "nationalRatePct": 1.14, "rateCapAdjustedPct": 1.89, "treasuryYieldPct": 4.20, "nationalRateCapPct": 5.79 },
+      { "product": "6 month CD", "nationalRatePct": 1.39, "rateCapAdjustedPct": 2.14, "treasuryYieldPct": 4.33, "nationalRateCapPct": 5.95 },
+      { "product": "12 month CD", "nationalRatePct": 1.76, "rateCapAdjustedPct": 2.51, "treasuryYieldPct": 4.54, "nationalRateCapPct": 6.20 },
+      { "product": "24 month CD", "nationalRatePct": 1.55, "rateCapAdjustedPct": 2.30, "treasuryYieldPct": 4.88, "nationalRateCapPct": 6.61 },
+      { "product": "36 month CD", "nationalRatePct": 1.39, "rateCapAdjustedPct": 2.14, "treasuryYieldPct": 5.00, "nationalRateCapPct": 6.75 },
+      { "product": "48 month CD", "nationalRatePct": 1.31, "rateCapAdjustedPct": 2.06, "treasuryYieldPct": 5.00, "nationalRateCapPct": 6.75 },
+      { "product": "60 month CD", "nationalRatePct": 1.41, "rateCapAdjustedPct": 2.16, "treasuryYieldPct": 5.09, "nationalRateCapPct": 6.86 }
+    ]
+  },
+  "federalReservePolicy": {
+    "officialUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "currentTargetRangePct": "3.75–4.00",
+    "currentMidpointPct": 3.875,
+    "latestActionDate": "2026-09-17",
+    "latestActionChangeBps": 25,
+    "recentHistory": [
+      { "date": "2026-09-17", "changeBps": 25, "targetRangePct": "3.75–4.00" },
+      { "date": "2025-12-11", "changeBps": -25, "targetRangePct": "3.50–3.75" },
+      { "date": "2025-10-30", "changeBps": -25, "targetRangePct": "3.75–4.00" },
+      { "date": "2025-09-18", "changeBps": -25, "targetRangePct": "4.00–4.25" },
+      { "date": "2024-12-19", "changeBps": -25, "targetRangePct": "4.25–4.50" }
+    ]
+  },
+  "federalReserveLargeBanksRelease": {
+    "officialUrl": "https://www.federalreserve.gov/releases/lbr/current/",
+    "asciiUrl": "https://www.federalreserve.gov/releases/lbr/current/lrg_bnk_lst.txt",
+    "dataAsOfDate": "2026-06-30",
+    "postedDate": "2026-10-02"
+  }
+}
