@@ -8,7 +8,7 @@ The Arena session branch is fixed at `arena/f025ed43-savings4`; all work and the
 |---|---|---|---|
 | Official-source research and evidence capture | done | arena-f025ed43 | research/**, data/** |
 | Dashboard, category pages, calculations, tests | done | arena-f025ed43 | index.html, assets/**, pages/**, scripts/**, package.json, package-lock.json, README.md, .gitignore |
-| Final integration, source recheck, Pages publication | in progress | arena-f025ed43 | COORDINATION.md, .github/** |
+| Final integration, source recheck, Pages publication | done | arena-f025ed43 | COORDINATION.md, .github/** |
 
 ## Activity log
 
@@ -28,7 +28,7 @@ The Arena session branch is fixed at `arena/f025ed43-savings4`; all work and the
 | Official-source research and evidence capture | done | arena-f025ed43 | research/**, data/** |
 | Dashboard, category pages, calculations, tests | done | arena-f025ed43 | scripts/**, assets/**, package.json, README.md, .gitignore |
 | Published irregularities | needs review | arena-f025ed43 | data/flags.json → pages/flagged.html |
-| Final integration, source recheck, Pages publication | in progress | arena-f025ed43 | COORDINATION.md, .github/** |
+| Final integration, source recheck, Pages publication | done | arena-f025ed43 | COORDINATION.md, .github/** |
 
 No other owners or branches were present. This session is the final integration owner. Existing task scopes did not overlap another session.
 
@@ -45,3 +45,17 @@ No other owners or branches were present. This session is the final integration 
 - Final integration session arena-f025ed43 claims integration-only `previous/**`, existing root-route redirects, shared root landing/navigation, workflow and coordination. Other sessions’ source files in `docs/**` remain untouched. Current reviewed data remains isolated in `data/**`; prior session quotes are NOT silently imported or marked verified.
 - `git merge origin/main` conflicted in COORDINATION.md, README.md, index.html, assets/style.css and .github/workflows/pages.yml. Resolution retains this session’s reviewed dashboard/build/verification workflow at the root, keeps original prior root site as an intact archive with its own stylesheet, and preserves the entire docs site. Both prior findings and official source links remain available. No session's research is discarded.
 - Added a published prior-session reconciliation flag: snapshots report differing figures/eligibility; full independent re-verification of every prior row is incomplete. These historical artifacts are labeled prior-session snapshots, not the current verified rate feed. This is a published needs-review item, not a blocker.
+
+
+## Publication result — completed
+
+- Integration PR: https://github.com/sassnarep3-star/SAVINGS4/pull/3 — **MERGED**, 2026-10-22 00:17:35 UTC, merge commit `a74e2cc836fc1030ddd0997c5bd711b219176d29`.
+- Final integration branch check: https://github.com/sassnarep3-star/SAVINGS4/actions/runs/39698789932 — **success**.
+- Main verification: https://github.com/sassnarep3-star/SAVINGS4/actions/runs/39698819433 — **success**.
+- GitHub Pages build/deployment: https://github.com/sassnarep3-star/SAVINGS4/actions/runs/39698818936 — **success**; Pages API reports `built`, no error, deployed commit `a74e2cc836fc1030ddd0997c5bd711b219176d29`, updated 2026-10-22 00:19:03 UTC.
+- Live URL: https://sassnarep3-star.github.io/SAVINGS4/ — public page fetched successfully; title `Overview · Savings4`, 12 products / 11 bank groups / 17 flags confirmed. Public Flagged for Review page also fetched successfully: https://sassnarep3-star.github.io/SAVINGS4/pages/flagged.html.
+- Current-site tests cover every official-source row, all local links and fragments, dates, CSV nulls and model math. Additional combined check found **zero broken local links across all 22 current and preserved snapshot HTML pages**; old root-route redirects are included in the build as well. Prior-session numerical reconciliation remains published **needs review**, not marked verified.
+- Merge-conflict handling: preserved all prior-session root HTML/assets, docs sources, coordination board, README and workflow history. No research discarded. A plain `git pull --rebase` attempted to flatten the newly merged other-session history and conflicted; aborted that rebase (retaining the complete resolution commit) and successfully used `git pull --rebase=merges` to preserve the merged history before pushing. No force push and no branch switch.
+- Nonblocking operational limitation: integration token cannot edit Pages settings or cancel an obsolete early branch workflow (HTTP 403); this did not block the existing legacy Pages deployment, and all final/main checks and deployed build above succeeded. No credentials were requested or changed.
+
+All implementation and publication tasks are done. Published unresolved facts (17 items, including prior-session reconciliation) remain **needs review**. This documentation follow-up is published through a small PR from the same fixed session branch; the live site does not require user input.

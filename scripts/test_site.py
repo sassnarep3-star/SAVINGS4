@@ -97,6 +97,18 @@ class DataAndSite(unittest.TestCase):
                 self.assertTrue(dest.is_file(),f'{path}: missing {ref}')
                 if u.fragment and dest.suffix=='.html':
                     self.assertIn(unquote(u.fragment),self.docs[dest].ids,f'{path}: broken #{u.fragment}')
+    def test_preserved_snapshots_and_legacy_links(self):
+        combined={p:Document(p.read_text()) for p in OUT.rglob('*.html')}
+        self.assertGreaterEqual(len(combined),22)
+        for path,doc in combined.items():
+            for ref in doc.refs:
+                u=urlsplit(ref)
+                if u.scheme or u.netloc or '${' in ref:continue
+                dest=(path.parent/unquote(u.path)).resolve() if u.path else path
+                self.assertTrue(dest.exists(),f'{path}: missing preserved link {ref}')
+                if u.fragment and dest.suffix=='.html' and dest in combined:
+                    self.assertIn(unquote(u.fragment),combined[dest].ids,f'{path}: missing preserved fragment {ref}')
+
     def test_every_table_row_has_official_source(self):
         allowed={s['url'] for s in self.sources}
         for path,doc in self.docs.items():
