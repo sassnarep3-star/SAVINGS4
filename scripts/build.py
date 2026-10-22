@@ -194,6 +194,9 @@ def build():
     for archive in ['previous','docs']:
         if (ROOT/archive).exists():
             shutil.copytree(ROOT/archive,OUT/archive,dirs_exist_ok=True)
+    for legacy_route in ['accounts','bonuses','fdic','flagged','methodology','returns']:
+        if (ROOT/(legacy_route+'.html')).exists():
+            shutil.copy2(ROOT/(legacy_route+'.html'),OUT/(legacy_route+'.html'))
     with (OUT/'data/accounts.csv').open('w',newline='') as f:
         writer=csv.writer(f)
         writer.writerow(['bank','account','category','apy_percent','rate_as_of','checked','opening_minimum_usd','monthly_fee_usd','fee_waiver','confirmed_offer','app','security','fdic_note','opening_rules','access','review_flags','official_sources'])
