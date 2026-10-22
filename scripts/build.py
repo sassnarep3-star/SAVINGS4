@@ -803,6 +803,9 @@ def build():
     for archive in ["previous", "docs"]:
         if (ROOT / archive).exists():
             shutil.copytree(ROOT / archive, OUT / archive, dirs_exist_ok=True)
+    for legacy_route in ["accounts", "bonuses", "fdic", "flagged", "methodology", "returns"]:
+        if (ROOT / (legacy_route + ".html")).exists():
+            shutil.copy2(ROOT / (legacy_route + ".html"), OUT / (legacy_route + ".html"))
 
     with (OUT / "data/accounts.csv").open("w", newline="") as f:
         writer = csv.writer(f)
