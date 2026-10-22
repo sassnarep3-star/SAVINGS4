@@ -198,6 +198,12 @@ def build():
     for path,title,fn in [('index.html','Overview',overview),('pages/accounts.html','Account comparison',comparison),('pages/returns.html','Returns & FDIC plan',returns),('pages/bonuses.html','Bonuses & promotions',bonuses),('pages/protection.html','Security & opening',protection),('pages/flagged.html','Flagged for Review',flagged),('pages/sources.html','Sources & methodology',methodology)]:
         page(path,title,fn())
     (OUT/'.nojekyll').write_text('')
+    # Existing Pages site uses main:/ legacy publishing. Preserve it when the
+    # integration token cannot change Pages settings. Commit these small outputs.
+    shutil.copy2(OUT/'index.html',ROOT/'index.html')
+    shutil.copytree(OUT/'pages',ROOT/'pages',dirs_exist_ok=True)
+    shutil.copy2(OUT/'data/accounts.csv',ROOT/'data/accounts.csv')
+    (ROOT/'.nojekyll').write_text('')
     print(f'Built 7 pages, {len(accounts)} products, {len(sources)} evidence records, {len(flags)} review items in {OUT}')
 
 if __name__=='__main__':

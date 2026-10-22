@@ -39,10 +39,10 @@ Optional aliases: `npm run build`, `npm test`, `npm run check`.
 - `scripts/test_site.py`: evidence integrity, models, table-row sources, exports and internal-link/fragment checks.
 - `COORDINATION.md`: task ownership, review and publication record.
 
-Build output is `_site/`, ignored by Git. All assets are local; no third-party fonts, trackers, live bank requests or personal-data collection in the browser. Filters work locally with JavaScript; content is server-rendered static HTML and remains readable without it.
+Preview/artifact output is `_site/`, ignored by Git. The builder also synchronizes the small generated `index.html`, `pages/*.html`, `data/accounts.csv` and `.nojekyll` files to the repository root for the existing legacy Pages publisher. Commit these generated files after input changes. All assets are local; no third-party fonts, trackers, live bank requests or personal-data collection in the browser. Filters work locally with JavaScript; content is server-rendered static HTML and remains readable without it.
 
 ## Publish
 
-GitHub Actions builds and validates on PRs and pushes to the session branch. Only successful builds on `main` deploy to GitHub Pages using the official Pages artifact workflow. Repository Pages must use the GitHub Actions build type. Published links are relative and work under `/SAVINGS4/`.
+GitHub Actions builds and validates on PRs and pushes to the session branch. The existing GitHub Pages configuration publishes `main:/` using the legacy Pages build; `.nojekyll` serves the committed static HTML directly. An attempt to change Pages to custom Actions publishing received HTTP 403 (integration permission restriction), so the existing working publishing configuration is preserved. Merge only after the verification check succeeds, then confirm the automatic Pages build/deployment succeeds. Published links are relative and work under `/SAVINGS4/`.
 
 Official external pages were read in the research session; automated tests check internal links and evidence references, not the continuing truth or worldwide availability of external bank pages. Re-read official evidence before updating rates and both date types. Never silently roll forward the research date.

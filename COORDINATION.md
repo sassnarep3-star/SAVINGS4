@@ -6,8 +6,8 @@ The Arena session branch is fixed at `arena/f025ed43-savings4`; all work and the
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Official-source research and evidence capture | in progress | arena-f025ed43 | research/**, data/** |
-| Dashboard, category pages, calculations, tests | in progress | arena-f025ed43 | index.html, assets/**, pages/**, scripts/**, package.json, package-lock.json, README.md, .gitignore |
+| Official-source research and evidence capture | done | arena-f025ed43 | research/**, data/** |
+| Dashboard, category pages, calculations, tests | done | arena-f025ed43 | index.html, assets/**, pages/**, scripts/**, package.json, package-lock.json, README.md, .gitignore |
 | Final integration, source recheck, Pages publication | in progress | arena-f025ed43 | COORDINATION.md, .github/** |
 
 ## Activity log
@@ -31,3 +31,5 @@ The Arena session branch is fixed at `arena/f025ed43-savings4`; all work and the
 | Final integration, source recheck, Pages publication | in progress | arena-f025ed43 | COORDINATION.md, .github/** |
 
 No other owners or branches were present. This session is the final integration owner. Existing task scopes did not overlap another session.
+
+- 2026-10-22: Pages configuration update via API returned HTTP 403 (integration cannot update Pages settings). Existing site already publishes `main:/` in legacy mode. Final integration additionally claims `.nojekyll`, generated `index.html`, `pages/**` and `data/accounts.csv`; using committed static outputs with the existing automatic legacy Pages build rather than requesting user intervention. CI still builds/tests; custom Actions deployment removed to avoid an incompatible publishing mode. No credentials changed.

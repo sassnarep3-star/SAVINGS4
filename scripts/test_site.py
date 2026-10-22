@@ -110,6 +110,10 @@ class DataAndSite(unittest.TestCase):
             self.assertTrue(doc.has_main)
             self.assertEqual(doc.h1,1)
             self.assertEqual(len(doc.ids),len(set(doc.ids)),f'duplicate IDs in {path}')
+    def test_legacy_publication_outputs_match(self):
+        for relative in ['index.html','data/accounts.csv','.nojekyll'] + [str(p.relative_to(OUT)) for p in (OUT/'pages').glob('*.html')]:
+            self.assertEqual((ROOT/relative).read_bytes(),(OUT/relative).read_bytes())
+
     def test_csv_preserves_blanks(self):
         with (OUT/'data/accounts.csv').open() as f:rows=list(csv.DictReader(f))
         self.assertEqual(len(rows),12)
