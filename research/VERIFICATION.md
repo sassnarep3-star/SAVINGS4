@@ -29,3 +29,7 @@ Repository started with only `README.md`; no pre-existing data to verify. Offici
 - No account was opened and no deposit made. No application, credentials, referral, date of birth, residence, ownership structure, tax status, existing balance or offer eligibility is assumed to have been verified.
 - Official pages can be dynamic, region-dependent or stale. Successful retrieval is not a universal guarantee a link works in every browser. Broken diagnostic URLs are omitted from navigation and retained here as investigative history only.
 - Future rates, taxes, inflation, and bank-specific daily rounding are not forecast. Calculation methods and assumptions are published separately, never represented as official bank quotes.
+
+## Concurrent-session integration addendum
+
+At final merge, origin/main had advanced through PRs #1 and #2 from other sessions. Their root site and assets are preserved intact in `previous/root/`, their entire `docs/` site remains unchanged, and their coordination/history is archived in `previous/coordination/`. They have additional products and conflicting eligibility/rate interpretations. Not every historical row has been independently reverified here; those quotes are not imported into the current structured rate feed. The Sources page labels these snapshots and the Flagged for Review page publishes the unresolved reconciliation. The row-by-row decisions above apply to the current dashboard only.

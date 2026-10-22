@@ -46,3 +46,7 @@ Preview/artifact output is `_site/`, ignored by Git. The builder also synchroniz
 GitHub Actions builds and validates on PRs and pushes to the session branch. The existing GitHub Pages configuration publishes `main:/` using the legacy Pages build; `.nojekyll` serves the committed static HTML directly. An attempt to change Pages to custom Actions publishing received HTTP 403 (integration permission restriction), so the existing working publishing configuration is preserved. Merge only after the verification check succeeds, then confirm the automatic Pages build/deployment succeeds. Published links are relative and work under `/SAVINGS4/`.
 
 Official external pages were read in the research session; automated tests check internal links and evidence references, not the continuing truth or worldwide availability of external bank pages. Re-read official evidence before updating rates and both date types. Never silently roll forward the research date.
+
+## Concurrent-session preservation
+
+Two sessions merged into main while this session was working. Their original root HTML and assets are preserved intact in `previous/root/`; their `docs/` site remains unchanged. Original coordination/README/workflow are archived in `previous/coordination/`. The current dashboard Sources page links both snapshots and flags independent reconciliation as incomplete. Historical quotes are not silently imported or marked verified by this session. Prior root routes redirect to the corresponding preserved page so their original styles/navigation remain functional.

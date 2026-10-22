@@ -171,5 +171,17 @@
       "amex"
     ],
     "severity": "Review"
+  },
+  {
+    "id": "prior-sessions",
+    "title": "Concurrent-session snapshots need reconciliation",
+    "detail": "Two other sessions merged research into main during this session. Their root HTML/assets are preserved under previous/root and their docs site remains unchanged. They contain additional products and differing rate/location interpretations. They are historical prior-session snapshots, not independently reverified current quotes, and are not silently imported into this dashboard. See Sources & methodology for both preserved sites and the original coordination history.",
+    "sources": [
+      "synchrony",
+      "capital",
+      "citi",
+      "pnc"
+    ],
+    "severity": "Review"
   }
 ]

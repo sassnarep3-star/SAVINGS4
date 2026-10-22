@@ -61,7 +61,7 @@ class DataAndSite(unittest.TestCase):
         cls.accounts=json.loads((ROOT/'data/accounts.json').read_text())
         cls.sources=json.loads((ROOT/'data/sources.json').read_text())
         cls.flags=json.loads((ROOT/'data/flags.json').read_text())
-        cls.docs={p:Document(p.read_text()) for p in OUT.rglob('*.html')}
+        cls.docs={p:Document(p.read_text()) for p in [OUT/'index.html',*(OUT/'pages').glob('*.html')]}
     def test_evidence_integrity(self):
         ids=[s['id'] for s in self.sources]
         self.assertEqual(len(ids),len(set(ids)))

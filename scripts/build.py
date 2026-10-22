@@ -181,6 +181,7 @@ def methodology():
     for s in sources:
         r.append(row([f'<strong>{E(s["id"])}</strong><small>Checked {s["checked"]}</small>',E(s['asOf']) if s['asOf'] else blank(),f'<strong>{E(s["title"])}</strong><p>{E(s["excerpt"])}</p>'+ (f'<p class="source-note">Review note: {E(s["note"])}</p>' if s['note'] else ''),f'<a class="source-url" href="{E(s["url"])}" target="_blank" rel="noopener noreferrer">Official source ↗</a>'],f'id="{E(s["id"])}"'))
     result+=panel(f'{len(sources)} official evidence records','Publisher date blank = no relevant effective date established. Not all sources state a rate; some document missing or conflicting values.',table(['Evidence ID / read date','Publisher date','Selected evidence / treatment','Manual review'],r,'Official source evidence ledger','sources-table'))
+    result+=notice('<strong>Preserved prior-session work:</strong> <a href="../previous/root/index.html">earlier root-site snapshot</a> · <a href="../docs/index.html">earlier docs-site snapshot</a> · <a href="../previous/coordination/previous-sessions.md">original coordination board</a>. These snapshots contain additional products and differing interpretations; their rows have not all been independently reverified here. They are historical artifacts, not the current confirmed-rate feed. See the <a href="flagged.html#prior-sessions">published reconciliation flag</a>.')
     result+='<div class="grid-two"><section class="card"><h2>Reproducible data</h2><p><a href="../data/accounts.csv" download>Account comparison CSV ↓</a><br><a href="../data/accounts.json">Account JSON</a> · <a href="../data/sources.json">Source JSON</a> · <a href="../data/flags.json">Review JSON</a><br><a href="../research/VERIFICATION.md">Row-by-row verification notes</a></p><p>One set of structured inputs drives every page. No account information or user data is collected or transmitted by the site.</p></section><section class="card"><h2>Maintaining the snapshot</h2><p>Recheck official pages, resolve region-dependent disclosures, update evidence with read and effective dates, and run the build and tests before publishing a new snapshot. The site never changes rate dates without source review.</p><p>Use the coordination board to claim non-overlapping work. A failed or unresolved source remains flagged rather than silently replaced.</p></section></div>'
     return result
 
@@ -190,6 +191,9 @@ def build():
     shutil.copytree(ROOT/'assets',OUT/'assets',dirs_exist_ok=True)
     shutil.copytree(ROOT/'data',OUT/'data',dirs_exist_ok=True)
     shutil.copytree(ROOT/'research',OUT/'research',dirs_exist_ok=True)
+    for archive in ['previous','docs']:
+        if (ROOT/archive).exists():
+            shutil.copytree(ROOT/archive,OUT/archive,dirs_exist_ok=True)
     with (OUT/'data/accounts.csv').open('w',newline='') as f:
         writer=csv.writer(f)
         writer.writerow(['bank','account','category','apy_percent','rate_as_of','checked','opening_minimum_usd','monthly_fee_usd','fee_waiver','confirmed_offer','app','security','fdic_note','opening_rules','access','review_flags','official_sources'])
