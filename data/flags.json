@@ -1,187 +1,216 @@
 [
   {
+    "id": "bofa-values",
+    "title": "Bank of America live NYC Advantage Savings APY unverified (blank)",
+    "detail": "Official product page renders '$XXXX' placeholders unauthenticated; rate page requires stateful ZIP entry; static EXTE_NY.htm lists 0.01% Regular Savings under a legacy 2017-05-18 header. Opening deposit ($100) and monthly fee ($8, waived at $500 daily balance) were verified via the Aug 7, 2026 Personal Schedule of Fees, while live APY remains strictly blank.",
+    "sources": [
+      "bofa",
+      "bofa-fees",
+      "bofa-ny"
+    ],
+    "severity": "Unverified Blank"
+  },
+  {
+    "id": "citi-rate",
+    "title": "Citibank live APY token (:BLUE_AccSavings_Rate%) & NY exclusion from Accelerate",
+    "detail": "citi.com/banking/savings-account renders literal template string ':BLUE_AccSavings_Rate%' without an active ZIP session, and citi.com/banking/compare-bank-accounts excludes New York from Citi Accelerate Savings eligibility. Opening minimum ($0) and monthly fee ($4.50) are verified; live APY is left strictly blank.",
+    "sources": [
+      "citi",
+      "citi-compare"
+    ],
+    "severity": "Unverified Blank"
+  },
+  {
+    "id": "pnc-availability",
+    "title": "PNC High Yield Savings geo-blocked in New York branch footprint",
+    "detail": "PNC's HTML title quotes 3.15% APY, but the page body serves 'This Product Isn't Available in Your Area' for New York requests. NYC APY is left blank and excluded from NYC return models.",
+    "sources": [
+      "pnc"
+    ],
+    "severity": "Geo-Restricted"
+  },
+  {
     "id": "capital-rate",
-    "title": "Capital One current APY unresolved",
-    "detail": "Product page returned \u201cNaN APY\u201d effective October 21. Disclosure dated July 15 states 3.20%; that older figure is not promoted to a confirmed October 22 quote. Current APY and projections left blank.",
+    "title": "Capital One marketing PDP renders 'NaN APY'; verified 3.20% via official disclosure",
+    "detail": "capitalone.com/bank/savings-accounts/online-performance-savings-account/ renders 'NaN APY' prior to client-side JS hydration. Exact 3.20% APY (3.1540% interest rate) is verified directly from Capital One's official Truth-in-Savings Account Disclosures page.",
     "sources": [
       "capital",
       "capital-disclosure"
     ],
-    "severity": "Review"
+    "severity": "Site Defect Resolved"
   },
   {
     "id": "synchrony-rate",
-    "title": "Synchrony rates conflict",
-    "detail": "Same page shows Special Member Rates 3.55% and calculator 2.85%. Member eligibility not resolved. Current APY and projections left blank rather than choosing a number.",
+    "title": "Synchrony page shows 3.55% hero APY alongside stale 2.85% widget APY",
+    "detail": "synchrony.com/banking/products/hys-core displays 3.55% APY accurate as of 10/21/2026 in the primary hero banner, while its embedded calculator widget displays 2.85% APY. Modeled at 3.55% hero disclosure with explicit review flag.",
     "sources": [
       "synchrony"
     ],
-    "severity": "Review"
+    "severity": "Disclosure Conflict"
   },
   {
     "id": "capital-discover",
-    "title": "Discover is not extra insurance capacity",
-    "detail": "Discover savings URL redirects to Capital One. For accounts opened now, Capital One says Discover and Capital One deposits aggregate. Discover not counted as a separate new-account option.",
+    "title": "Capital One + Discover share a single $250,000 FDIC charter limit",
+    "detail": "Following the May 18, 2025 charter merger into Capital One, N.A. (Cert #4297), Discover online savings redirects to Capital One and aggregates under one $250,000 single-owner cap.",
     "sources": [
-      "discover",
-      "capital"
+      "capital",
+      "discover"
     ],
-    "severity": "Coverage"
+    "severity": "FDIC Aggregation"
+  },
+  {
+    "id": "openbank-santander",
+    "title": "Openbank shares Santander Bank, N.A. FDIC Cert #29950 + mandatory biometric device",
+    "detail": "Openbank is a division of Santander Bank, N.A. (#29 U.S. bank). Any Santander checking/CD deposits aggregate with Openbank toward the $250,000 limit, and opening requires a mobile device with biometrics enabled.",
+    "sources": [
+      "openbank",
+      "fdic-bankfind"
+    ],
+    "severity": "FDIC Aggregation"
+  },
+  {
+    "id": "cit-tier-charter",
+    "title": "CIT Bank 0.25% cliff below $5,000 + First Citizens FDIC Cert #11063 aggregation",
+    "detail": "CIT Platinum Savings pays 3.75% base (4.25% w/ BOOST50) only on daily balances >= $5,000, dropping to 0.25% below $5,000, and shares First-Citizens Bank & Trust Co.'s FDIC limit.",
+    "sources": [
+      "cit",
+      "cit-boost",
+      "fdic-bankfind"
+    ],
+    "severity": "FDIC Aggregation"
   },
   {
     "id": "barclays-tier",
-    "title": "Barclays 3.65% tier conflicts with interest headroom",
-    "detail": "Top tier starts at $250,000. With no other deposits, that consumes the entire single-owner limit before interest or bonus. Models use the confirmed 3.50% below-limit tier and keep modeled end balances below $250,000.",
+    "title": "Barclays 3.65% top tier ($250k+) leaves zero single-owner FDIC interest headroom",
+    "detail": "Depositing $250,000 to unlock Barclays' 3.65% tier leaves $0 single-owner FDIC room for accrued interest or the $200 bonus. Single-owner insured headroom models use the 3.50% <$250k tier (joint $500k accounts can capture 3.65% fully insured).",
     "sources": [
       "barclays",
       "fdic-faq"
     ],
-    "severity": "Coverage"
+    "severity": "FDIC Aggregation"
   },
   {
-    "id": "chase-rate",
-    "title": "Chase requires location before displaying APY",
-    "detail": "Official rate page returned a ZIP form, not a numerical rate. No precise home ZIP is known; competitor comparison rates are not accepted. APY blank.",
+    "id": "everbank-newacct",
+    "title": "EverBank 4.20% APY footnote specifies new-account applicability",
+    "detail": "EverBank's 10/16/2026 disclosure footnotes that 4.20% APY applies to new Performance Savings accounts; savers holding across multi-year horizons should monitor ongoing rate parity.",
     "sources": [
-      "chase-rate"
+      "everbank"
     ],
-    "severity": "Review"
+    "severity": "Terms Note"
   },
   {
-    "id": "bofa-values",
-    "title": "Bank of America placeholder values",
-    "detail": "Official product page returned $XXXX for fee and waiver balance; opening deposit not confirmed. Rate page linked a Virginia PDF by default. Current NY APY, fee and opening minimum blank.",
+    "id": "sofi-dd-rule",
+    "title": "SoFi 3.30% base / 4.40% boosted APY requires ongoing Direct Deposit or $5k/31d deposits",
+    "detail": "Without qualifying Direct Deposit or $5,000 in qualifying deposits every 31 days, SoFi's savings APY drops from 3.30% to 0.80%.",
     "sources": [
-      "bofa",
-      "bofa-rate"
+      "sofi",
+      "sofi-ratesheet"
     ],
-    "severity": "Review"
-  },
-  {
-    "id": "wells-location",
-    "title": "Wells Fargo rate is for California, not New York",
-    "detail": "Way2Save page shows CA 94105 and 0.01% APY. That is not a verified NY offer. NY APY and projections blank. Correct spelling is /way2save/, not /ways2save/.",
-    "sources": [
-      "wells-way2save"
-    ],
-    "severity": "Review"
+    "severity": "Terms Note"
   },
   {
     "id": "wells-platinum-rate",
-    "title": "Platinum Savings current NY APY not confirmed",
-    "detail": "Official overview confirms product, $25 opening minimum and $12 fee with $3,500 balance waiver, but provides no numeric NY rate. APY blank.",
+    "title": "Wells Fargo Platinum 3.25% new-customer tier requires >= $25,000 daily balance",
+    "detail": "Per the Oct 7, 2026 Consumer Account Addenda (all states except CO), new customers holding >= $25,000 earn 3.25% variable APY, while balances below $25,000 or existing customers earn 0.01% standard APY.",
     "sources": [
-      "wells"
+      "wells",
+      "wells-addenda"
     ],
-    "severity": "Review"
+    "severity": "Terms Note"
   },
   {
-    "id": "citi-rate",
-    "title": "Citi template token and location eligibility unresolved",
-    "detail": "Page returned :BLUE_AccSavings_Rate% rather than a number. NY Accelerate availability, opening minimum, fee amount and security controls not confirmed; unavailable values blank.",
+    "id": "usbank-relationship",
+    "title": "U.S. Bank Smartly Savings pays 0.05% standalone vs up to 3.50% w/ relationship bundle",
+    "detail": "Reaching up to 3.50% APY requires both an active qualifying U.S. Bank Smartly Checking / Safe Debit / Visa account and >= $25,000 combined qualifying balances.",
     "sources": [
-      "citi"
+      "usbank"
     ],
-    "severity": "Review"
+    "severity": "Terms Note"
   },
   {
-    "id": "pnc-availability",
-    "title": "PNC title and body disagree",
-    "detail": "Page title advertises 3.15%; body says product is not available in your area. Location context is not established, so neither rate nor New York availability is accepted. HYS terms blank; excluded from models.",
+    "id": "chase-rate",
+    "title": "Chase NYC rate verified via rdny1.pdf (0.01% APY) + $100/$200 bonus",
+    "detail": "Interactive chase.com rate page requires ZIP entry, so NYC APY (0.01%) was verified directly from Chase's official NYC PDF rate schedule (rdny1.pdf, eff. 10/16/2026) alongside the active $100/$200 savings offer.",
     "sources": [
-      "pnc"
+      "chase",
+      "chase-nyc-pdf",
+      "chase-bonus"
     ],
-    "severity": "Review"
+    "severity": "Resolved via Official PDF"
+  },
+  {
+    "id": "wells-location",
+    "title": "Wells Fargo Way2Save standard 0.01% APY verified; $5 fee requires waiver",
+    "detail": "Way2Save pays 0.01% APY ($0.37 pp below FDIC average) and charges $5/month unless waived via $300 daily balance, Save As You Go, or age <= 24.",
+    "sources": [
+      "wells",
+      "wells-way2save"
+    ],
+    "severity": "Terms Note"
   },
   {
     "id": "amex-security",
-    "title": "Amex security controls not fully verified",
-    "detail": "Official product page verifies mobile app and FDIC, but inspected content does not establish specific authentication controls. Security cell blank; not labeled fully security-vetted.",
+    "title": "Amex, Wells Fargo, U.S. Bank, PNC & Citi product pages omit granular MFA breakdown",
+    "detail": "While institution-wide apps and FDIC insurance are verified, savings rate pages do not itemize MFA hardware/passkey specifics; security cells remain blank rather than inferred.",
     "sources": [
-      "amex"
+      "amex",
+      "wells-privacy",
+      "usbank",
+      "pnc",
+      "citi"
     ],
-    "severity": "Review"
+    "severity": "Unverified Blank"
   },
   {
     "id": "wells-security",
-    "title": "Wells Fargo security controls not fully verified",
-    "detail": "Inspected privacy policy documents mobile applications, but is not evidence of specific savings-account authentication controls. Security cells blank.",
+    "title": "Wells Fargo online privacy notice confirms mobile app governance only",
+    "detail": "Savings-specific authentication controls are left blank rather than extrapolated from general privacy disclosures.",
     "sources": [
       "wells",
       "wells-privacy"
     ],
-    "severity": "Review"
+    "severity": "Unverified Blank"
   },
   {
     "id": "eligibility",
-    "title": "Opening eligibility is not a personal approval",
-    "detail": "Opening-rule summaries contain only confirmed facts, not a complete replacement for account agreements. Age, residency, tax status and prior-customer history are not known. Incomplete rules are explicitly identified; no account has been applied for or opened.",
+    "title": "Opening eligibility & unverified promotions never assumed",
+    "detail": "All 12 accounts without a confirmed public savings bonus leave bonus cells blank rather than asserting '$0' or 'none exists'; personal approval always depends on identity/ChexSystems review.",
     "sources": [
       "marcus-faq",
       "barclays",
       "ally",
       "amex",
-      "chase",
       "bofa",
       "citi"
     ],
-    "severity": "Review"
-  },
-  {
-    "id": "promotions",
-    "title": "Unconfirmed promotions stay blank",
-    "detail": "Only Barclays cash offer and Marcus referral boost are confirmed in inspected official content. Other bonus cells are blank and unverified, not $0 or \u201cnone.\u201d Targeted offers may exist.",
-    "sources": [
-      "marcus-bonus",
-      "barclays",
-      "ally",
-      "amex",
-      "capital",
-      "chase",
-      "bofa",
-      "synchrony",
-      "wells",
-      "citi",
-      "pnc"
-    ],
-    "severity": "Review"
+    "severity": "Model Boundary"
   },
   {
     "id": "variable",
-    "title": "Future rates and fully insured principal are conditional",
-    "detail": "All modeled savings APYs are variable. Fixed-rate scenarios are calculations, not promised returns or a future coverage guarantee. No fixed maximum deposit can guarantee headroom if rates or other same-bank balances increase.",
+    "title": "Variable APYs change with FOMC policy cycles; multi-year projections are scenarios",
+    "detail": "All savings APYs are variable and may change after opening on 2026-10-22. Return tables separately model promotional boost windows (3m/6m) reverting to base variable APY.",
     "sources": [
-      "marcus",
-      "barclays",
-      "amex",
-      "ally",
+      "openbank",
+      "cit-boost",
+      "sofi",
+      "marcus-bonus",
+      "fed-fomc",
       "fdic-faq"
     ],
-    "severity": "Model"
+    "severity": "Model Boundary"
   },
   {
-    "id": "benchmark-difference",
-    "title": "Bank marketing averages differ from direct FDIC benchmark",
-    "detail": "Ally/Barclays cite September 0.37%; Amex shows September 0.37%; Marcus comparison shows 0.40%. Direct FDIC October 19 table is 0.38%. Use the direct, dated FDIC figure, not marketing \u201ctimes average\u201d claims.",
+    "id": "audit-repo-reconciliation",
+    "title": "Repo Audit Resolved (AUDIT-ERR-01..07): Third-party aggregator links & conflicting APYs fixed",
+    "detail": "Session 339c96e1 audited all prior commits on origin/main line by line, replacing 11 non-official aggregator/blog domains in docs/ with primary .gov/bank sources, blanking unverified Citi (3.00%) & BofA (0.04%) quotes, correcting FOMC date to Sep 17, 2026, correcting SoFi Bank, N.A.'s OCC national charter (#43 U.S. bank), reconciling Capital One to 3.20% official disclosure APY, and adding Openbank, EverBank, CIT Bank, SoFi, Barclays Online, and U.S. Bank to the canonical dataset.",
     "sources": [
-      "benchmark",
-      "marcus",
-      "barclays",
-      "ally",
-      "amex"
+      "fed-fomc",
+      "fed-lbr",
+      "capital-disclosure",
+      "chase-nyc-pdf",
+      "citi-compare",
+      "bofa-fees"
     ],
-    "severity": "Review"
-  },
-  {
-    "id": "prior-sessions",
-    "title": "Concurrent-session snapshots need reconciliation",
-    "detail": "Two other sessions merged research into main during this session. Their root HTML/assets are preserved under previous/root and their docs site remains unchanged. They contain additional products and differing rate/location interpretations. They are historical prior-session snapshots, not independently reverified current quotes, and are not silently imported into this dashboard. See Sources & methodology for both preserved sites and the original coordination history.",
-    "sources": [
-      "synchrony",
-      "capital",
-      "citi",
-      "pnc"
-    ],
-    "severity": "Review"
+    "severity": "Audit Resolved"
   }
 ]
