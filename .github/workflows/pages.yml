@@ -1,0 +1,30 @@
+name: Verify and publish savings research
+on:
+  push:
+    branches: [main, arena/f025ed43-savings4]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build static site
+        run: python3 scripts/build.py
+      - name: Validate evidence, calculations and every internal link
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Ensure committed Pages outputs are reproducible
+        run: git diff --exit-code -- index.html pages data/accounts.csv .nojekyll
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-static-site
+          path: _site

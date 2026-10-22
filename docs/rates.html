@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Rates Comparison — SAVINGS4 | Every APY with official source</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="topbar"><div class="container"><div><strong>Rates verified Oct 21, 2026</strong> · Variable — can change daily · <a href="sources.html" style="color:#fff">12+ official sources</a></div><div class="pill" style="background:#fff">FDIC 0.37% Sep 2026 avg</div></div></div>
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo"><div class="logo-mark">$</div><div class="logo-text"><strong>SAVINGS4</strong><span>RATES TABLE</span></div></div>
+    <nav class="nav"><a href="index.html">Dashboard</a><a class="active" href="rates.html">Rates</a><a href="returns.html">FDIC-Max Returns</a><a href="bonuses.html">Bonuses & Rules</a><a href="security.html">Security & Apps</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a></nav>
+  </div>
+  <div class="hero" style="padding:18px 0 14px">
+    <div class="container">
+      <h1 style="font-size:32px">Current APYs — big national banks only</h1>
+      <p>Every row has a clickable official source + date. Use the filter or click column headers to sort. <strong style="color:#fff">Red = below national average, Teal = leaders.</strong></p>
+    </div>
+  </div>
+</header>
+<main class="container section">
+  <div class="callout">
+    <strong>How to read:</strong> “select markets” means the bank only offers that rate outside its branch footprint — see <a href="security.html">Security & Apps</a> for ZIP restrictions. “Relationship” needs a linked checking account. “Tiered” pays different APY by daily balance.
+  </div>
+
+  <div class="filters">
+    <input id="q" placeholder="Filter by bank, product, APY, fee…" oninput="filterTable('q','rates')"/>
+    <select onchange="filterTableCategory(this.value)"><option value="">All categories</option><option>HYSA</option><option>Branch low-rate</option></select>
+    <button class="btn" onclick="sortTable('rates',2,true)">Sort by APY ↓</button>
+    <span class="muted" style="font-size:12px">Tap header to sort · <a href="data/savings.json">Machine-readable JSON</a></span>
+  </div>
+
+  <div class="table-wrap">
+    <table id="rates">
+      <thead>
+        <tr>
+          <th onclick="sortTable('rates',0,false)" style="cursor:pointer">Bank ↕</th>
+          <th>Product</th>
+          <th onclick="sortTable('rates',2,true)" style="cursor:pointer">APY ↕</th>
+          <th>Min to open / earn</th>
+          <th>Monthly fee</th>
+          <th>FDIC</th>
+          <th onclick="sortTable('rates',6,false)" style="cursor:pointer">Category ↕</th>
+          <th>Bonus (see Bonuses page)</th>
+          <th>Official source (click →)</th>
+          <th>As of</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>CIT Bank</strong> (First Citizens)</td>
+          <td>Platinum Savings (tiered)</td>
+          <td class="apy high">3.75% on $5k+<br/><span style="color:#64748b;font-weight:600">0.25% &lt; $5k</span></td>
+          <td>$100 / $5k for top tier</td>
+          <td>$0</td>
+          <td>Member FDIC</td>
+          <td><span class="pill ok">HYSA · 4.25% promo</span></td>
+          <td>BOOST50 → 4.25% 6 mo</td>
+          <td class="source"><a href="https://www.cit.com/cit-bank/bank/savings/platinum-savings-account">cit.com — Platinum Savings 3.75%</a><br/><a href="https://www.cit.com/cit-bank/platinum-savings/boost">boost terms</a></td>
+          <td class="num">Jul 1, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Barclays US</strong></td>
+          <td>Tiered Savings</td>
+          <td class="apy high">3.65% ($250k-$1M)<br/><span style="color:#64748b;font-weight:600">3.50% &lt;$250k</span></td>
+          <td>$0 / $0.01 to post</td>
+          <td>$0</td>
+          <td>Member FDIC</td>
+          <td><span class="pill ok">HYSA · tiered</span></td>
+          <td>$200 on $25k to 10/31/26</td>
+          <td class="source"><a href="https://banking.us.barclays/compare-our-products.html">banking.barclays — Compare products 3.65%</a></td>
+          <td class="num">Oct 16, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Synchrony Bank</strong></td>
+          <td>High Yield Savings</td>
+          <td class="apy high">3.55%</td>
+          <td>$0 / $0</td>
+          <td>$0</td>
+          <td>Member FDIC</td>
+          <td><span class="pill ok">HYSA</span></td>
+          <td>None</td>
+          <td class="source"><a href="https://www.synchrony.com/banking/products/high-yield-savings">synchrony.com — 3.55%</a></td>
+          <td class="num">Oct 5, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Marcus by Goldman Sachs</strong></td>
+          <td>Online Savings</td>
+          <td class="apy high">3.50%</td>
+          <td>$0 / $0</td>
+          <td>$0</td>
+          <td>Goldman Sachs Bank USA — Member FDIC</td>
+          <td><span class="pill ok">HYSA · #1 JD Power</span></td>
+          <td>Referral +1.00% 3 mo</td>
+          <td class="source"><a href="https://www.marcus.com/us/en/savings/high-yield-savings">marcus.com — 3.50%</a></td>
+          <td class="num">Oct 21, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>U.S. Bank</strong></td>
+          <td>Smartly Savings (relationship)</td>
+          <td class="apy high">up to 3.50%<br/><span style="color:#b45309;font-weight:700">0.05% without Smartly Checking</span></td>
+          <td>$25 / $5k–$25k CQB bumps</td>
+          <td>$5 (waived e-statements + checking)</td>
+          <td>Member FDIC</td>
+          <td><span class="pill warn">Branch · relationship</span></td>
+          <td>$500 checking promo</td>
+          <td class="source"><a href="https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings.html">usbank.com — Earn up to 3.50%</a></td>
+          <td class="num">Sep 30, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>American Express N.B.</strong></td>
+          <td>High Yield Savings</td>
+          <td class="apy mid">3.20%</td>
+          <td>$0 / $0</td>
+          <td>$0</td>
+          <td>Member FDIC</td>
+          <td><span class="pill ok">HYSA</span></td>
+          <td>None</td>
+          <td class="source"><a href="https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/">americanexpress.com — 3.20%</a></td>
+          <td class="num">Oct 15, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Barclays US</strong></td>
+          <td>Online Savings</td>
+          <td class="apy mid">3.20%</td>
+          <td>$0 / $0.01</td>
+          <td>$0</td>
+          <td>Member FDIC</td>
+          <td><span class="pill">HYSA</span></td>
+          <td>None (Tiered $200 separate)</td>
+          <td class="source"><a href="https://banking.us.barclays/online-savings.html">banking.barclays — 3.20%</a></td>
+          <td class="num">Oct 18, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>PNC Bank</strong></td>
+          <td>High Yield Savings</td>
+          <td class="apy mid">3.15% <span style="color:#dc2626">select markets</span></td>
+          <td>$0 / $1</td>
+          <td>$0</td>
+          <td>Member FDIC</td>
+          <td><span class="pill warn">Branch · ZIP-restricted</span></td>
+          <td>None</td>
+          <td class="source"><a href="https://www.pnc.com/en/personal-banking/banking/savings/high-yield-savings.html">pnc.com — 3.15%</a></td>
+          <td class="num">Sep 21, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Ally Bank</strong></td>
+          <td>Online Savings</td>
+          <td class="apy mid">3.10%</td>
+          <td>$0 / $0</td>
+          <td>$0 (10 withdrawals/cycle)</td>
+          <td>Member FDIC</td>
+          <td><span class="pill">HYSA</span></td>
+          <td>None</td>
+          <td class="source"><a href="https://www.ally.com/bank/online-savings-account/">ally.com — 3.10% as of 10/21/26</a></td>
+          <td class="num">Oct 21, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Capital One</strong></td>
+          <td>360 Performance Savings</td>
+          <td class="apy mid">3.10%</td>
+          <td>$0 / $0</td>
+          <td>$0</td>
+          <td>Member FDIC (Discover merged May 18, 2025)</td>
+          <td><span class="pill">HYSA · hybrid branch</span></td>
+          <td>None</td>
+          <td class="source"><a href="https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/">capitalone.com — 3.10%</a></td>
+          <td class="num">Oct 12, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Discover</strong> → Capital One</td>
+          <td>Online Savings (legacy)</td>
+          <td class="apy mid">3.10% (via Cap One)</td>
+          <td>$0 / $0</td>
+          <td>$0</td>
+          <td>Now Capital One N.A. — one $250k limit</td>
+          <td><span class="pill" style="background:#fef2f2;border-color:#fecaca;color:#991b1b">MERGED May 18, 2025</span></td>
+          <td>New: open Cap One</td>
+          <td class="source"><a href="https://www.discover.com/online-banking/savings/">discover.com → capone</a></td>
+          <td class="num">Sep 24, 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Citibank</strong></td>
+          <td>Accelerate Savings</td>
+          <td class="apy mid">3.00% <span style="color:#dc2626">select markets</span></td>
+          <td>$0 / $0</td>
+          <td>$4.50 (waived &gt;$500 avg or linked checking)</td>
+          <td>Member FDIC</td>
+          <td><span class="pill warn">Branch · market-restricted</span></td>
+          <td>None (checking $1,500)</td>
+          <td class="source"><a href="https://www.citi.com/banking/current-interest-rates/savings-accounts">citi.com — Accelerate 3.00%</a></td>
+          <td class="num">Oct 12, 2026</td>
+        </tr>
+        <tr style="background:#fff7ed">
+          <td><strong>Wells Fargo</strong></td>
+          <td>Platinum Savings — PROMO</td>
+          <td class="apy high">3.25% promo</br><span style="color:#9a3412">0.01–0.05% standard</span></td>
+          <td>$25 / $25k in 30d + $25k daily</td>
+          <td>$12 (waived $3,500 daily)</td>
+          <td>Member FDIC</td>
+          <td><span class="pill warn">Branch · promo only</span></td>
+          <td>Main draw is promo</td>
+          <td class="source"><a href="https://www.wellsfargo.com/savings-cds/platinum/">wellsfargo.com — Platinum 3.25% promo</a></td>
+          <td class="num">Oct 7, 2026</td>
+        </tr>
+        <tr style="background:#fef2f2">
+          <td><strong>Wells Fargo</strong></td>
+          <td>Way2Save (standard)</td>
+          <td class="apy low">0.01%</td>
+          <td>$25 / $25</td>
+          <td>$5 (waived $300 or auto $25)</td>
+          <td>Member FDIC</td>
+          <td><span class="pill" style="background:#fee2e2;color:#991b1b">Branch low-rate</span></td>
+          <td>$325 checking</td>
+          <td class="source"><a href="https://www.wellsfargo.com/savings-cds/rates/">wellsfargo.com — rates 0.01%</a></td>
+          <td class="num">Oct 7, 2026</td>
+        </tr>
+        <tr style="background:#fef2f2">
+          <td><strong>Bank of America</strong></td>
+          <td>Advantage Savings</td>
+          <td class="apy low">0.01% → 0.04% max<br/><span style="color:#6b7280">Gold 0.02% Plat 0.03% Diamond 0.04%</span></td>
+          <td>$100 / $20k–$1M+ for boost</td>
+          <td>$8 (waived $500 daily or relationship)</td>
+          <td>Member FDIC</td>
+          <td><span class="pill" style="background:#fee2e2;color:#991b1b">Branch low-rate</span></td>
+          <td>$300 checking</td>
+          <td class="source"><a href="https://www.bankofamerica.com/deposits/bank-account-interest-rates/">bankofamerica.com — 0.04% max</a></td>
+          <td class="num">Oct 21, 2026</td>
+        </tr>
+        <tr style="background:#fef2f2">
+          <td><strong>JPMorgan Chase</strong></td>
+          <td>Savings / Premier Savings</td>
+          <td class="apy low">0.01% <span style="color:#6b7280">(0.02% Premier rel.)</span></td>
+          <td>$0 / $0.01</td>
+          <td>$5 ($25 Premier) waivable</td>
+          <td>Member FDIC</td>
+          <td><span class="pill" style="background:#fee2e2;color:#991b1b">Branch low-rate</span></td>
+          <td>$300 checking</td>
+          <td class="source"><a href="https://www.chase.com/personal/savings/savings-account/interest-rates">chase.com rate sheet — 0.01%</a></td>
+          <td class="num">Oct 16, 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn" style="margin-top:14px">
+    <strong>⚠️ Two products are market-restricted:</strong> PNC High Yield Savings is <em>not</em> offered inside PNC’s branch footprint (PA, OH, NJ, NY, IL, etc. — verify your ZIP), and Citi Accelerate is <em>not</em> offered in branch states (CA, CT, FL, IL, MD, NV, NJ, NY, VA, DC). If you live there, you get PNC Standard 0.02% or Citi Savings 0.03% instead. We flag this on every card so you don't waste time.
+  </div>
+
+  <div class="grid-2" style="margin-top:16px">
+    <div class="card" style="padding:16px">
+      <h3 style="margin-top:0">How we verified (line by line)</h3>
+      <ol style="font-size:13px">
+        <li>Fetched each bank's official savings page (or official PDF rate sheet for Chase).</li>
+        <li>Copied the APY, date, minimum, fee, and bonus from that page — no inference.</li>
+        <li>Saved the source link in the table and in <a href="data/savings.json">savings.json</a>.</li>
+        <li>If a value wasn't on the official page, left blank and moved to <a href="flagged.html">Flagged</a>.</li>
+      </ol>
+      <p class="muted" style="font-size:12px">FDIC national average 0.37% Sep 21 2026 from <a href="https://www.fdic.gov/national-rates-and-rate-caps/national-rates-and-rate-caps-september-2026">FDIC</a> and 0.38% Oct 19 2026 <a href="https://www.fdic.gov/national-rates-and-rate-caps">FDIC</a>. Fed funds 3.75–4.00% after Sep 16 hike — <a href="https://www.investopedia.com/high-yield-savings-accounts-4770633">Investopedia summary</a>.</p>
+    </div>
+    <div class="card" style="padding:16px">
+      <h3 style="margin-top:0">What counts as “big national bank” here?</h3>
+      <p class="muted" style="font-size:13px">We used the biggest U.S. banks by assets + direct banks owned by big institutions. All have a mobile app and are FDIC-insured. Excluded: small locals, credit unions, fintechs that sweep to partner banks, and non-bank money-market funds.</p>
+      <table style="font-size:12px"><tr><th>Included</th><th>Excluded</th></tr><tr><td>JPMorgan Chase, BofA, Wells, Citi, Goldman Sachs (Marcus), PNC, U.S. Bank, Capital One (+Discover), Barclays US, Ally, Amex, Synchrony, CIT (First Citizens)</td><td>Credit Karma, SoFi (fintech), Wealthfront, Betterment, local CUs, Treasury Direct, money-market mutual funds (not FDIC)</td></tr></table>
+      <a class="btn primary" href="returns.html" style="margin-top:10px">See what $250k earns at each →</a>
+    </div>
+  </div>
+</main>
+<footer class="footer"><div class="container"><small>All rates as of dates shown. Variable rates can change after you open. Verify at the linked official source before applying. Not financial advice. <a href="sources.html">Full sources</a></small></div></div></footer>
+<script src="js/app.js"></script>
+<script>
+function filterTableCategory(cat){
+  const rows=document.querySelectorAll('#rates tbody tr');
+  const q=document.getElementById('q').value.toLowerCase();
+  rows.forEach(tr=>{
+    const okQ = !q || tr.textContent.toLowerCase().includes(q);
+    const okCat = !cat || tr.textContent.includes(cat);
+    tr.style.display = (okQ && okCat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

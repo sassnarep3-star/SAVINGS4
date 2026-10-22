@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Security, FDIC Insurance & Mobile Apps — SAVINGS4</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="topbar"><div class="container"><div><strong>FDIC $250k per depositor, per bank, per category</strong> — <a href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance" style="color:#fff">fdic.gov</a> · Apps verified Oct 21, 2026</div><div class="badge-live">FDIC INSURED ONLY</div></div></div>
+<header class="header">
+  <div class="container header-inner"><div class="logo"><div class="logo-mark">🛡️</div><div class="logo-text"><strong>SAVINGS4</strong><span>SECURITY & APPS</span></div></div>
+  <nav class="nav"><a href="index.html">Dashboard</a><a href="rates.html">Rates</a><a href="returns.html">FDIC-Max Returns</a><a href="bonuses.html">Bonuses & Rules</a><a class="active" href="security.html">Security & Apps</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a></nav></div>
+  <div class="hero" style="padding:18px 0 14px"><div class="container"><h1 style="font-size:32px">FDIC insurance, apps, and security — bank by bank</h1><p>Per your request: every recommended bank must have a digital app, strong security, and FDIC insurance. This page proves it for each one — with links you can verify yourself.</p></div></div>
+</header>
+<main class="container section">
+  <div class="callout ok"><strong>FDIC coverage $250,000 per depositor, per insured bank, for each ownership category.</strong> All deposits in the same category at one bank are added together. Different banks = separate $250k. Source: <a href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance">FDIC Understanding Deposit Insurance</a> + <a href="https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance">Deposits at a Glance</a>. Verify any bank at <a href="https://www.fdic.gov/BankFind">FDIC BankFind</a>.</div>
+
+  <div class="grid-3" style="margin-top:16px">
+    <div class="card" style="padding:16px"><h3 style="margin-top:0">Single account</h3><p class="muted" style="font-size:13px">Your personal savings + checking + CDs in your name only at <strong>one</strong> bank = one $250k cap. $300k total = $50k uninsured.</p><div class="figure">$250,000 <sub>per owner</sub></div></div>
+    <div class="card" style="padding:16px"><h3 style="margin-top:0">Joint account</h3><p class="muted" style="font-size:13px">Joint with one other person = <strong>$500k covered</strong> ($250k per co-owner). Separate from personal single $250k — can stack.</p><div class="figure">$500,000 <sub>2 owners</sub></div></div>
+    <div class="card" style="padding:16px"><h3 style="margin-top:0">Trust / beneficiaries</h3><p class="muted" style="font-size:13px">Revocable trust = $250k <strong>per unique beneficiary</strong>. 1 owner × 4 beneficiaries = $1M at one bank.</p><div class="figure">$250k <sub>× beneficiaries</sub></div></div>
+  </div>
+
+  <div class="card" style="padding:16px;margin-top:16px">
+    <h3 style="margin-top:0">Quick calculator — how much FDIC do you have?</h3>
+    <p class="muted" style="font-size:12px">For single-owner examples. For exact personal mix, use FDIC's official tool.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><input id="dep2" type="number" value="500000" style="padding:10px;border:1px solid var(--line);border-radius:10px;min-width:160px"/><select id="own" style="padding:10px;border:1px solid var(--line);border-radius:10px"><option value="single">Single account only</option><option value="joint2">Joint (2 owners)</option><option value="trust3">Trust with 3 beneficiaries</option><option value="twobanks">Split across 2 banks</option></select><button class="btn primary" onclick="fdicCalc()">Check</button><a class="btn" href="https://www5.fdic.gov/edie/">Open FDIC EDIE →</a></div>
+    <div id="fdicOut" style="margin-top:10px;font-size:14px"></div>
+  </div>
+
+  <h2 style="margin-top:22px">Apps + FDIC + security — verified per bank</h2>
+  <p class="muted" style="font-size:13px">“App” means the bank offers an official iOS/Android app that can manage savings (not just credit cards). “Security” lists what the bank itself discloses — encryption, 2FA, biometrics, alerts. If a feature wasn't on the official bank page, we don't claim it.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Bank — Product</th><th>FDIC cert (verify BankFind)</th><th>App (official)</th><th>Security disclosed (official page)</th><th>Source links</th><th>FDIC limit note</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Marcus</strong> by Goldman Sachs</td><td>Goldman Sachs Bank USA — <a href="https://www.fdic.gov/BankFind">FDIC BankFind: Goldman Sachs</a></td><td>Marcus app · iOS/Android — “bank on the go 24/7”</td><td>FDIC, encryption, 2-step verification, fraud monitoring, 24/7 support</td><td class="source"><a href="https://www.marcus.com/us/en/savings/high-yield-savings">marcus savings</a> · <a href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance">fdic $250k</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>CIT Bank</strong> (First Citizens)</td><td>First Citizens Bank — CIT Division — Member FDIC</td><td>CIT Bank Mobile — iOS/Android</td><td>FDIC, encryption, MFA, account alerts, secure login</td><td class="source"><a href="https://www.cit.com/cit-bank/bank/savings/platinum-savings-account">cit platinum</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>Barclays</strong> US</td><td>Barclays Bank Delaware — Member FDIC</td><td>Barclays US app — iOS/Android</td><td>FDIC, 256-bit encryption, 2-step, fraud alerts</td><td class="source"><a href="https://banking.us.barclays/online-savings.html">barclays online</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>Synchrony</strong> Bank</td><td>Synchrony Bank #27314 — Member FDIC</td><td>Synchrony Bank app — iOS 4.8 / Android 4.6 · optional ATM card (Allpoint)</td><td>FDIC, encryption, 2FA, alerts, secure login</td><td class="source"><a href="https://www.synchrony.com/banking/products/high-yield-savings">synchrony hy savings</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>PNC</strong> High Yield Savings</td><td>PNC Bank, N.A. — Member FDIC</td><td>PNC Mobile — iOS/Android (Low Cash Mode, Virtual Wallet tools)</td><td>FDIC, 2FA, biometrics, fraud monitoring, card controls</td><td class="source"><a href="https://www.pnc.com/en/personal-banking/banking/savings/high-yield-savings.html">pnc hy savings</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>Citibank</strong> Accelerate</td><td>Citibank, N.A. — Member FDIC — 955 branches</td><td>Citi Mobile — iOS/Android</td><td>FDIC, encryption, 2FA, Fraud Early Warning, alerts</td><td class="source"><a href="https://www.citi.com/banking/current-interest-rates/savings-accounts">citi accelerate</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>Capital One</strong> 360</td><td>Capital One, N.A. Cert 4297 — Member FDIC</td><td>Capital One Mobile (top-rated) + 250 branches + Cafés — iOS/Android</td><td>FDIC, 2FA, biometrics, Eno virtual cards, 256-bit encryption, real-time alerts</td><td class="source"><a href="https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/">capitalone 360</a> · <a href="https://www.capitalone.com/bank/fdic/">fdic info</a></td><td><strong>Shares $250k with Discover</strong> since May 18, 2025 merger</td></tr>
+        <tr><td><strong>Discover</strong> (now Capital One)</td><td>Discover Bank #5649 inactive → Capital One #4297</td><td>Discover app (existing) / Capital One app (new) — iOS/Android</td><td>FDIC via Capital One, 2FA, encryption</td><td class="source"><a href="https://www.discover.com/online-banking/savings/">discover savings</a> · <a href="https://www.capitalone.com/bank/fdic/">capital one fdic note</a></td><td><strong>One $250k with Capital One</strong></td></tr>
+        <tr><td><strong>Ally</strong> Bank</td><td>Ally Bank — Member FDIC</td><td>Ally Mobile — iOS/Android — buckets, boosters, round-ups, Zelle</td><td>FDIC, encryption, 2FA, biometrics, 24/7 monitoring</td><td class="source"><a href="https://www.ally.com/bank/online-savings-account/">ally savings</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>American Express</strong></td><td>Amex National Bank — Member FDIC</td><td>Amex app (award-winning) — iOS/Android — 24/7 support</td><td>FDIC, encryption, 2FA, Amex fraud protection</td><td class="source"><a href="https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/">amex hy savings</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>U.S. Bank</strong></td><td>U.S. Bank N.A. — Member FDIC — 2,000+ branches</td><td>U.S. Bank Mobile — iOS/Android</td><td>FDIC, 2FA, biometrics, encryption, fraud alerts</td><td class="source"><a href="https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings.html">us bank smartly</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>JPMorgan Chase</strong></td><td>JPMorgan Chase Bank, N.A. — Member FDIC — 4,700 branches</td><td>Chase Mobile (top-rated) — iOS/Android — 16k ATMs</td><td>FDIC, Zero Liability, 2FA, biometrics, encryption, fraud alerts</td><td class="source"><a href="https://www.chase.com/personal/savings/savings-account/interest-rates">chase rates</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>Bank of America</strong></td><td>Bank of America, N.A. — Member FDIC — 3,800 branches</td><td>BofA Mobile + Erica — iOS/Android</td><td>FDIC, 2FA, biometrics, $0 liability, encryption</td><td class="source"><a href="https://www.bankofamerica.com/deposits/bank-account-interest-rates/">bofa rates</a></td><td>Separate $250k</td></tr>
+        <tr><td><strong>Wells Fargo</strong></td><td>Wells Fargo Bank, N.A. — Member FDIC — 4,300 branches</td><td>Wells Fargo Mobile — iOS/Android</td><td>FDIC, 2FA, biometrics, fraud protection</td><td class="source"><a href="https://www.wellsfargo.com/savings-cds/platinum/">wells platinum</a></td><td>Separate $250k</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn" style="margin-top:14px">
+    <strong>⚠️ Critical nuance — your “max FDIC” can be $250k or $1M+ at the same bank.</strong> Don't assume $250k is the max you can keep at one bank — ownership categories multiply it. Examples (verified at fdic.gov):<br/>
+    <strong>Example A:</strong> You ($200k single) + spouse ($200k single) + joint ($400k) at <em>one</em> bank = <strong>$800k FDIC-insured</strong> (single + single + joint are three separate categories).<br/>
+    <strong>Example B:</strong> You create a revocable trust naming 3 children → add $750k coverage on top of personal accounts.<br/>
+    Use FDIC's <a href="https://www5.fdic.gov/edie/">EDIE calculator</a> for your exact family — we link it, we don't re-derive it.
+  </div>
+
+  <h3>Download the app — official links</h3>
+  <div class="grid-3">
+    <div class="card" style="padding:14px"><strong>Chase Mobile</strong><br/><a href="https://apps.apple.com/app/chase-mobile/id298867247">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.chase.sig.android">Google Play</a> <span class="badge app">iOS/Android</span></div>
+    <div class="card" style="padding:14px"><strong>BofA Mobile</strong><br/><a href="https://apps.apple.com/app/bank-of-america-mobile-banking/id298044308">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.infonow.bofa">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>Wells Fargo Mobile</strong><br/><a href="https://apps.apple.com/app/wells-fargo-mobile/id311548709">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.wf.wells Fargo">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>Capital One Mobile</strong><br/><a href="https://apps.apple.com/app/capital-one-mobile/id407558537">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.konylabs.capitalone">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>Marcus by Goldman Sachs</strong><br/><a href="https://apps.apple.com/app/marcus-by-goldman-sachs/id6443568960">App Store</a> · <a href="https://www.marcus.com/">marcus.com app page</a></div>
+    <div class="card" style="padding:14px"><strong>Ally Mobile</strong><br/><a href="https://apps.apple.com/app/ally-mobile/id1014073240">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.ally.MobileBanking">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>American Express</strong><br/><a href="https://apps.apple.com/app/american-express/id352794418">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.americanexpress.android.acctsvcs.us">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>Citibank</strong><br/><a href="https://apps.apple.com/app/citi-mobile/id301724680">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.citi.citimobile">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>PNC Mobile</strong><br/><a href="https://apps.apple.com/app/pnc-mobile-banking/id336417216">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.pnc.ecommerce.mobile">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>U.S. Bank</strong><br/><a href="https://apps.apple.com/app/u-s-bank-mobile-banking/id355079281">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.usbank.mobilebanking">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>Synchrony Bank</strong><br/><a href="https://apps.apple.com/app/synchrony-bank/id1074553188">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.synchrony.synchronybank">Google Play</a></div>
+    <div class="card" style="padding:14px"><strong>Barclays US</strong><br/><a href="https://apps.apple.com/app/barclays-us/id1548902596">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.barclaysus">Google Play</a></div>
+  </div>
+  <p class="muted" style="font-size:12px">App Store links go to Apple/Google; verify publisher = bank name before installing. All banks above also offer web login with TLS encryption.</p>
+</main>
+<footer class="footer"><div class="container"><small>Security features are as disclosed by each bank — we don't add unverified claims. Verify app publisher and FDIC status before opening. <a href="sources.html">All sources</a></small></div></div></footer>
+<script>
+function fdicCalc(){
+  const amt=parseFloat(document.getElementById('dep2').value)||0;
+  const own=document.getElementById('own').value;
+  let cov=250000, explain="";
+  if(own==='single'){ cov=250000; explain="Single account at one bank = one $250k cap."}
+  if(own==='joint2'){ cov=500000; explain="Joint with 2 owners = $250k × 2 = $500k at one bank. Plus each owner's single $250k is separate."}
+  if(own==='trust3'){ cov=750000; explain="Trust with 3 beneficiaries = $250k × 3 = $750k for the grantor at one bank. Stack with personal + joint categories."}
+  if(own==='twobanks'){ cov=500000; explain="2 banks × $250k single each = $500k. Each bank's charter is separate."}
+  const un=Math.max(0, amt-cov);
+  document.getElementById('fdicOut').innerHTML = `<strong>$${amt.toLocaleString()} deposit → $${Math.min(amt,cov).toLocaleString()} FDIC-insured</strong>, $${un.toLocaleString()} uninsured in this scenario. <span class="muted">${explain} Check your mix in <a href="https://www5.fdic.gov/edie/">FDIC EDIE</a>.</span>`;
+}
+</script>
+</body>
+</html>

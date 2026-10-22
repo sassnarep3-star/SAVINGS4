@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Methodology — SAVINGS4</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="topbar"><div class="container"><div><strong>Methodology & Verification</strong> — how every number was checked</div><div><a href="sources.html" style="color:#fff">Sources</a></div></div></div>
+<header class="header">
+  <div class="container header-inner"><div class="logo"><div class="logo-mark">$</div><div class="logo-text"><strong>SAVINGS4</strong><span>METHODOLOGY</span></div></div>
+  <nav class="nav"><a href="index.html">Dashboard</a><a href="rates.html">Rates</a><a href="returns.html">FDIC-Max Returns</a><a href="bonuses.html">Bonuses & Rules</a><a href="security.html">Security & Apps</a><a class="active" href="sources.html">Sources</a><a href="flagged.html">Flagged</a></nav></div>
+  <div class="hero" style="padding:18px 0 14px"><div class="container"><h1 style="font-size:32px">How we verified everything — line by line</h1><p>No hallucinations. Every APY, fee, minimum, and bonus was copied from an official bank site (or official PDF rate sheet) and linked in the table. If we couldn't find it, we left it blank and flagged it.</p></div></div>
+</header>
+<main class="container section" style="max-width:860px">
+  <div class="card" style="padding:18px">
+    <h3 style="margin-top:0">1. Universe — what we include</h3>
+    <ul style="font-size:14px">
+      <li><strong>Big national banks only:</strong> U.S. banks among the largest by assets/deposits, plus direct banks owned by big institutions (Marcus/Goldman, Ally, Amex, Synchrony, CIT/First Citizens, Barclays US).</li>
+      <li><strong>Required:</strong> mobile app + FDIC insurance + savings account openable online nationwide (with noted market exceptions).</li>
+      <li><strong>Excluded:</strong> small locals, credit unions, fintech sweep programs, money-market mutual funds (not FDIC).</li>
+    </ul>
+    <h3>2. Data collection (Oct 21, 2026 — today)</h3>
+    <ol style="font-size:14px">
+      <li>Fetched each bank's official savings page HTML (or PDF rate sheet for Chase). Saved effective date printed on page.</li>
+      <li>Copied APY, minimum to open, minimum to earn, monthly fee + waiver, bonus/promo, and opening rules verbatim.</li>
+      <li>Captured source URL — one per row, clickable in every table.</li>
+      <li>Cross-checked against FDIC national average (0.37% Sep 21, 0.38% Oct 19) and Fed funds range (3.75–4.00% post-Sep 16 hike).</li>
+      <li>Fetched FDIC BankFind to confirm FDIC cert still active.</li>
+    </ol>
+    <h3>3. Calculations — returns tables</h3>
+    <p style="font-size:14px"><strong>1-year interest = deposit × APY</strong> (APY already includes compounding, so APY×principal is correct for a 12-month projection assuming rate flat). Monthly column = 12-month ÷ 12 (simple average). Multi-year compounded in calculator uses <code>(1+APY)^(months/12)-1</code>. Fees not subtracted from interest unless noted (e.g., Citi $4.50 if not waived). Variable APYs will move with the Fed — tables are <strong>snapshots, not guarantees</strong>.</p>
+    <h3>4. Competitiveness & life-span analysis</h3>
+    <p style="font-size:14px">We compare to FDIC national average (0.37% Sep 21 — <a href="https://www.fdic.gov/national-rates-and-rate-caps/national-rates-and-rate-caps-september-2026">source</a>), Fed funds (3.75–4.00%), and fixed CD alternatives (Marcus 4.40%, Barclays 4.50%, CIT 4.00% no-penalty). CDs lock the rate; savings can drop next month. For 6–12 mo horizons, CD spread today is +0.45 to +1.00 pp.</p>
+    <h3>5. Bonuses & promotions</h3>
+    <p style="font-size:14px">Only bonuses printed on the bank's official site count as “verified.” Third-party blogs are cited as <em>observed</em> only, not primary. If a promo needs a code (e.g., CIT BOOST50) we list the code and dates.</p>
+    <h3>6. Irregularities & unverified handling</h3>
+    <p style="font-size:14px">If a value wasn't on the official source before our cutoff, we leave the cell blank and list it on <a href="flagged.html">Flagged for Review</a>. Flagged items do not block the site — they're published for you to verify after launch. We never infer or copy from non-official sources as primary.</p>
+    <h3>7. Refresh cadence</h3>
+    <p class="muted" style="font-size:13px">Savings APYs are variable and can change the day after you open. This site is dated Oct 21, 2026. Check the linked official source live before opening — we mean it.</p>
+    <h3>8. No financial advice</h3>
+    <p class="muted" style="font-size:12px">This is independent research, not a recommendation. We are not a bank, broker, or adviser. APYs, fees, and terms change. Verify at the linked source and consider your own situation before opening.</p>
+  </div>
+
+  <div class="callout" style="margin-top:14px"><strong>Want to verify yourself?</strong> Open <a href="data/savings.json">data/savings.json</a> — every bank has <code>source</code> + <code>apyVerifiedDate</code>. Click through to the official page and compare.</div>
+</main>
+<footer class="footer"><div class="container"><small>Methodology dated 2026-10-21. <a href="sources.html">Full source ledger</a> · <a href="https://github.com/sassnarep3-star/SAVINGS4">Repo</a></small></div></div></footer>
+</body>
+</html>

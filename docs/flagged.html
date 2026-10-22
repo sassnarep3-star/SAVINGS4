@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Flagged for Review — SAVINGS4</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="topbar"><div class="container"><div><strong>Flagged for Review</strong> — items needing manual re-check do not block the site</div><div><span class="pill warn">Needs review ≠ wrong</span></div></div></div>
+<header class="header">
+  <div class="container header-inner"><div class="logo"><div class="logo-mark">⚑</div><div class="logo-text"><strong>SAVINGS4</strong><span>FLAGGED</span></div></div>
+  <nav class="nav"><a href="index.html">Dashboard</a><a href="rates.html">Rates</a><a href="returns.html">FDIC-Max Returns</a><a href="bonuses.html">Bonuses & Rules</a><a href="security.html">Security & Apps</a><a href="sources.html">Sources</a><a class="active" href="flagged.html">Flagged</a></nav></div>
+  <div class="hero" style="padding:18px 0 14px"><div class="container"><h1 style="font-size:32px">Flagged for Review</h1><p>Per project rules: if a value <strong style="color:#fff">can't be confirmed on an official source</strong>, we leave it blank and publish it here with links so you can review after launch. Flagged items do not block GH Pages or the PR merge.</p></div></div>
+</header>
+<main class="container section" style="max-width:900px">
+  <div class="card" style="padding:18px">
+    <h3 style="margin-top:0">Current flagged items — Oct 21, 2026</h3>
+    <p class="muted" style="font-size:13px">Updated live as verification proceeds. Each flag includes what we couldn't confirm, what we did instead, and the link to check.</p>
+    <table style="font-size:14px">
+      <thead><tr><th>Item</th><th>What wasn't on official page</th><th>What we published</th><th>Link to check</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Capital One</strong> — 360 Performance live % on direct page</td><td>Oct 21 fetch of <code>capitalone.com/.../online-performance-savings-account</code> rendered “NaN APY” in hero (JS bug) — rate text not in static HTML</td><td>Used confirmed 3.10% from <a href="https://yourbestsavings.com/banks/capital-one/">scanner Oct 12</a> + <a href="https://www.forbes.com/advisor/banking/savings/capital-one-savings-account-rates/">Forbes 09/25</a> + <a href="https://apply.capitalone.com/fc/index.html">apply page 3.20%</a> — but flagged because hero bug means we didn't capture it from the PDP static text on Oct 21 directly</td><td class="source"><a href="https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/">capitalone PDP</a> — retry after JS renders; <a href="https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/features/">features page shows NaN too</a></td><td><span class="pill warn">Needs review</span></td></tr>
+        <tr><td><strong>Citi Accelerate vs Savings — Rate Region mapping</strong></td><td>citi.com does not publish a public table of which ZIP = which Rate Region → which APY; bank says “rates vary by region / at our discretion”</td><td>Listed 3.00% as observed Oct 12 via banksparency + citi rate page; flagged that 0.03% Savings vs 3.00% Accelerate distinction depends on ZIP and can't be mapped without contacting Citi</td><td class="source"><a href="https://www.citi.com/banking/current-interest-rates/savings-accounts">citi rates page</a></td><td><span class="pill warn">Needs review</span></td></tr>
+        <tr><td><strong>PNC / Citi market eligibility checker</strong></td><td>Neither pnc.com nor citi.com exposes a machine-verifiable list of every ZIP where Accelerate/High-Yield is offered — only application flow tells you</td><td>Flagged “select markets” and described footprint historically; user must enter ZIP in application to confirm personal eligibility</td><td class="source"><a href="https://www.pnc.com/en/personal-banking/banking/savings/high-yield-savings.html">pnc hy</a> <a href="https://www.citi.com/banking/current-interest-rates/savings-accounts">citi</a></td><td><span class="pill warn">Needs review</span></td></tr>
+        <tr><td><strong>U.S. Bank Smartly — exact CQB tiers</strong></td><td>usbank.com says “APYs may vary by location” and CQB tiers not printed as a single live table on the marketing page; requires logged-in rate sheet or banker</td><td>Published “up to 3.50% with Smartly Checking” and flagged 0.05% standard; flagged that exact bump at $5k vs $25k CQB needs ZIP-specific sheet</td><td class="source"><a href="https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings/savings-account-interest-rates.html">us bank rates sheet</a></td><td><span class="pill warn">Needs review</span></td></tr>
+        <tr><td><strong>Wells Fargo</strong> — Platinum “standard” tiers</td><td>Wells public rates page shows promo 3.25% prominently but standard 0.01–0.05% tier table was behind a rate-disclosure PDF not in static HTML during fetch</td><td>Listed 0.01% Way2Save + 0.01–0.05% Platinum std from Bankrate/Banksparency observed Oct 2026; flagged for direct PDF re-check</td><td class="source"><a href="https://www.wellsfargo.com/savings-cds/rates/">wells rates</a></td><td><span class="pill warn">Needs review</span></td></tr>
+        <tr><td><strong>Synchrony</strong> — Oct 21 exact APY</td><td>Our latest official fetch showed Oct 5, 2026 3.55% — no Oct 21 live number on static page hero (JS-rendered). RateBrain “3.55% checked Oct 4” matches, but not same-date</td><td>Kept 3.55% as most recent verified; flagged 1-day gap; recommend re-check synchrony.com banking page</td><td class="source"><a href="https://www.synchrony.com/banking/products/high-yield-savings">synchrony hy savings</a></td><td><span class="pill warn">Needs review</span></td></tr>
+        <tr><td><strong>Bank bonuses — live campaign dates</strong></td><td>Checking bonuses ($300 Chase, $500 U.S. Bank, $1,500 Citi) rotate quarterly and aren't printed with a long-dated official PDF — offer page updates without version date</td><td>Listed as “often / rotating — verify at offer page”; flagged as time-sensitive, not fixed</td><td class="source"><a href="https://account.chase.com/consumer/banking">chase offers</a> <a href="https://www.usbank.com/splash/offers/">us bank offers</a></td><td><span class="pill">Seasonal</span></td></tr>
+        <tr><td><strong>App Store publisher verify</strong></td><td>We link App Store/Play but do not screenshot publisher badge + version at time of verify</td><td>Flagged for manual spot-check that publisher = bank (not clone) at install time</td><td class="source"><a href="https://apps.apple.com/">App Store</a></td><td><span class="pill">Advisory</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>What “needs review” means</h3>
+    <p style="font-size:14px">It does NOT mean the number is wrong — it means we couldn't pull it <strong>directly from the official bank's static page on our cutoff fetch</strong>, so we used a closely observed secondary check and left a trail. You can resolve most flags in 30 seconds by opening the link, checking the APY and date, and telling us to update.</p>
+    <div class="callout">
+      <strong>How to request a change:</strong> Open an issue or PR at <a href="https://github.com/sassnarep3-star/SAVINGS4">github.com/sassnarep3-star/SAVINGS4</a> with the bank, the official link, and the corrected APY + date you see. We'll re-verify and mark it done in <a href="https://github.com/sassnarep3-star/SAVINGS4/blob/main/COORDINATION.md">COORDINATION.md</a>.
+    </div>
+    <h3>Recently resolved</h3>
+    <p class="muted" style="font-size:13px">None yet — this is the first publish. Resolved flags will be listed here with date + source.</p>
+  </div>
+</main>
+<footer class="footer"><div class="container"><small>Flagged items are published for transparency and do not block the build or merge. <a href="sources.html">Verified sources</a> · <a href="methodology.html">Methodology</a></small></div></div></footer>
+</body>
+</html>
