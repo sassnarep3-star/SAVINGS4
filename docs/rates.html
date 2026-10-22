@@ -11,7 +11,7 @@
 <header class="header">
   <div class="container header-inner">
     <div class="logo"><div class="logo-mark">$</div><div class="logo-text"><strong>SAVINGS4</strong><span>RATES TABLE</span></div></div>
-    <nav class="nav"><a href="index.html">Dashboard</a><a class="active" href="rates.html">Rates</a><a href="returns.html">FDIC-Max Returns</a><a href="bonuses.html">Bonuses & Rules</a><a href="security.html">Security & Apps</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a></nav>
+    <nav class="nav"><a href="index.html">Dashboard</a><a class="active" href="rates.html">Rates</a><a href="returns.html">FDIC-Max Returns</a><a href="bonuses.html">Bonuses & Rules</a><a href="security.html">Security & Apps</a><a href="sources.html">Sources</a><a href="../index.html">← Unified Dashboard</a><a href="flagged.html">Flagged</a></nav>
   </div>
   <div class="hero" style="padding:18px 0 14px">
     <div class="container">
@@ -160,14 +160,14 @@
         <tr>
           <td><strong>Capital One</strong></td>
           <td>360 Performance Savings</td>
-          <td class="apy mid">3.10%</td>
+          <td class="apy mid">3.20%</td>
           <td>$0 / $0</td>
           <td>$0</td>
-          <td>Member FDIC (Discover merged May 18, 2025)</td>
+          <td>Member FDIC (Cert #4297; Discover merged May 18, 2025)</td>
           <td><span class="pill">HYSA · hybrid branch</span></td>
-          <td>None</td>
-          <td class="source"><a href="https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/">capitalone.com — 3.10%</a></td>
-          <td class="num">Oct 12, 2026</td>
+          <td>—</td>
+          <td class="source"><a href="https://www.capitalone.com/bank/disclosures/savings-accounts/online-performance-savings-account/">capitalone.com Truth-in-Savings — 3.20%</a></td>
+          <td class="num">Oct 21, 2026</td>
         </tr>
         <tr>
           <td><strong>Discover</strong> → Capital One</td>
@@ -184,13 +184,13 @@
         <tr>
           <td><strong>Citibank</strong></td>
           <td>Accelerate Savings</td>
-          <td class="apy mid">3.00% <span style="color:#dc2626">select markets</span></td>
+          <td class="apy mid">— <span style="color:#dc2626">unverified / NY excluded</span></td>
           <td>$0 / $0</td>
           <td>$4.50 (waived &gt;$500 avg or linked checking)</td>
           <td>Member FDIC</td>
           <td><span class="pill warn">Branch · market-restricted</span></td>
           <td>None (checking $1,500)</td>
-          <td class="source"><a href="https://www.citi.com/banking/current-interest-rates/savings-accounts">citi.com — Accelerate 3.00%</a></td>
+          <td class="source"><a href="https://www.citi.com/banking/current-interest-rates/savings-accounts">citi.com — :BLUE_AccSavings_Rate% (Flagged)</a></td>
           <td class="num">Oct 12, 2026</td>
         </tr>
         <tr style="background:#fff7ed">
@@ -220,13 +220,13 @@
         <tr style="background:#fef2f2">
           <td><strong>Bank of America</strong></td>
           <td>Advantage Savings</td>
-          <td class="apy low">0.01% → 0.04% max<br/><span style="color:#6b7280">Gold 0.02% Plat 0.03% Diamond 0.04%</span></td>
+          <td class="apy low">— <span style="color:#6b7280">(live APY ZIP-gated; Flagged)</span></td>
           <td>$100 / $20k–$1M+ for boost</td>
           <td>$8 (waived $500 daily or relationship)</td>
           <td>Member FDIC</td>
           <td><span class="pill" style="background:#fee2e2;color:#991b1b">Branch low-rate</span></td>
           <td>$300 checking</td>
-          <td class="source"><a href="https://www.bankofamerica.com/deposits/bank-account-interest-rates/">bankofamerica.com — 0.04% max</a></td>
+          <td class="source"><a href="https://www.bankofamerica.com/deposits/bank-account-interest-rates/">bankofamerica.com — ZIP-gated (Flagged)</a></td>
           <td class="num">Oct 21, 2026</td>
         </tr>
         <tr style="background:#fef2f2">
@@ -258,12 +258,12 @@
         <li>Saved the source link in the table and in <a href="data/savings.json">savings.json</a>.</li>
         <li>If a value wasn't on the official page, left blank and moved to <a href="flagged.html">Flagged</a>.</li>
       </ol>
-      <p class="muted" style="font-size:12px">FDIC national average 0.37% Sep 21 2026 from <a href="https://www.fdic.gov/national-rates-and-rate-caps/national-rates-and-rate-caps-september-2026">FDIC</a> and 0.38% Oct 19 2026 <a href="https://www.fdic.gov/national-rates-and-rate-caps">FDIC</a>. Fed funds 3.75–4.00% after Sep 16 hike — <a href="https://www.investopedia.com/high-yield-savings-accounts-4770633">Investopedia summary</a>.</p>
+      <p class="muted" style="font-size:12px">FDIC national average 0.37% Sep 21 2026 from <a href="https://www.fdic.gov/national-rates-and-rate-caps/national-rates-and-rate-caps-september-2026">FDIC</a> and 0.38% Oct 19 2026 <a href="https://www.fdic.gov/national-rates-and-rate-caps">FDIC</a>. Fed funds 3.75%–4.00% effective September 17, 2026 — <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">Federal Reserve FOMC</a>.</p>
     </div>
     <div class="card" style="padding:16px">
       <h3 style="margin-top:0">What counts as “big national bank” here?</h3>
       <p class="muted" style="font-size:13px">We used the biggest U.S. banks by assets + direct banks owned by big institutions. All have a mobile app and are FDIC-insured. Excluded: small locals, credit unions, fintechs that sweep to partner banks, and non-bank money-market funds.</p>
-      <table style="font-size:12px"><tr><th>Included</th><th>Excluded</th></tr><tr><td>JPMorgan Chase, BofA, Wells, Citi, Goldman Sachs (Marcus), PNC, U.S. Bank, Capital One (+Discover), Barclays US, Ally, Amex, Synchrony, CIT (First Citizens)</td><td>Credit Karma, SoFi (fintech), Wealthfront, Betterment, local CUs, Treasury Direct, money-market mutual funds (not FDIC)</td></tr></table>
+      <table style="font-size:12px"><tr><th>Included</th><th>Excluded</th></tr><tr><td>JPMorgan Chase, BofA, Wells, Citi, Goldman Sachs (Marcus), PNC, U.S. Bank, Capital One (+Discover), Barclays US, Ally, Amex, Synchrony, CIT (First Citizens)</td><td>Credit Karma, Wealthfront, Betterment (non-bank fintech sweeps), local CUs, money-market mutual funds (note: SoFi Bank, N.A. IS an OCC national bank, Cert #26881 — included in JSON &amp; root directory)</td></tr></table>
       <a class="btn primary" href="returns.html" style="margin-top:10px">See what $250k earns at each →</a>
     </div>
   </div>
